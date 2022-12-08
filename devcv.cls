@@ -34,9 +34,13 @@
 
 \setlength{\parindent}{0mm} % Suppress paragraph indentation
 
+\setlength{\parskip}{0mm} % Suppress paragraph skip
+
+\setlength{\baselineskip}{0mm} % Suppress baseline skip
+
 \usepackage[hidelinks]{hyperref} % Required for links but hide the default boxes around links
 
-\newcommand{\lorem}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.} % Dummy text
+%\newcommand{\lorem}{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.} % Dummy text
 
 \pagestyle{empty} % No headers or footers
 
@@ -74,7 +78,11 @@
 %\usepackage[default]{gillius}
 %\usepackage{roboto}
 
-\renewcommand*\familydefault{\sfdefault} % Force the sans-serif version of any font used
+%\renewcommand*\familydefault{\sfdefault} % Force the sans-serif version of any font used
+
+\usepackage{xcolor}
+
+\definecolor{cerulean}{RGB}{4,146,194} % Create the commonly used cerulean text color
 
 %------------------------------------------------
 
@@ -187,6 +195,13 @@
 % Environment to hold a new list of entries
 \newenvironment{entrylist}{
 	\begin{longtable}[H]{l l}
+}{
+	\end{longtable}
+}
+
+% Environment to hold three columns of entries
+\newenvironment{entrytable}{
+	\begin{longtable}[H]{c c c}
 }{
 	\end{longtable}
 }
