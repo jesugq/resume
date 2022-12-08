@@ -54,13 +54,13 @@
 
 \geometry{
 	paper=a4paper, % Paper size, change to letterpaper for US letter size
-	top=1.75cm, % Top margin
-	bottom=1.75cm, % Bottom margin
-	left=2cm, % Left margin
-	right=2cm, % Right margin
-	headheight=0.75cm, % Header height
-	footskip=1cm, % Space from the bottom margin to the baseline of the footer
-	headsep=0.5cm, % Space from the top margin to the baseline of the header
+	top=1.25cm, % Top margin
+	bottom=1.25cm, % Bottom margin
+	left=1.25cm, % Left margin
+	right=1.25cm, % Right margin
+	headheight=0cm, % Header height
+	footskip=0cm, % Space from the bottom margin to the baseline of the footer
+	headsep=0.0cm, % Space from the top margin to the baseline of the header
 	showframe, % Uncomment to show how the type block is set on the page
 }
 
