@@ -1,0 +1,92 @@
+%----------------------------------------------------------------------------------------
+%	TEXLIVE HELPERS
+%----------------------------------------------------------------------------------------
+
+% Command to output a non-intended hyperlink in the form of a cerulean colored font awesome icon.
+\newcommand{\hypericon}[2]{
+	\hspace{1mm}\href{#1}{\textcolor{cerulean}{\makebox[1mm]{\csname #2\endcsname}}}
+}
+
+% Command to output a small box containing a font awesome icon.
+\newcommand{\favicon}[1]{
+	\cerulean{\makebox(2, 7.5){\csname#1\endcsname}}
+}
+
+% Command to output non-intented huge bolded content.
+\newcommand{\hugebold}[1]{
+	\hspace{-3.5mm}{\HUGE\textbf{#1}}
+}
+
+% Command to output large cerulean colored content.
+\newcommand{\largecerulean}[1]{
+	{\Large\textcolor{cerulean}{#1}}
+}
+
+% Command to output non-indented bolded content.
+\newcommand{\bold}[1]{
+	\hspace{-1.5mm}\textbf{#1}
+}
+
+% Command to output non-indented italic content.
+\newcommand{\italic}[1]{
+	\hspace{-1.5mm}{\textit{#1}}
+}
+
+% Command to output cerulean colored content.
+\newcommand{\cerulean}[1]{
+	\textcolor{cerulean}{#1}
+}
+
+% Command to output a inserted vertical spacing.
+\newcommand{\spacing}[1]{
+	\vspace{#1mm}
+}
+
+%----------------------------------------------------------------------------------------
+%	TEXLIVE COMMANDS
+%----------------------------------------------------------------------------------------
+
+% Command to output a header with three elements, a large short name, personal information, and contact information.
+\newcommand{\docperson}[3]{
+	\parbox[t]{0.50\columnwidth}{ % Occupy half of the column width to place a short name
+		#1
+	}
+	\parbox[t]{0.225\columnwidth}{ % Occupy a quarter of the column width to place personal information
+		#2
+	}
+	\parbox[t]{0.225\columnwidth}{ % Occupy a quarter of the column width to place contact information
+		#3
+	}
+}
+
+% Command to output a large, cerulean name.
+\newcommand{\doclargename}{
+	\hugebold{\bodyrealname}
+	\spacing{2}
+	
+	\largecerulean{\bodydiploma}
+}
+
+% Command to output a vertical row of contact information.
+\newcommand{\doccontact}{
+	\spacing{-6}
+	\hypericon{https://goo.gl/maps/huNs7LUryooCMQML8}{faMapMarker}
+	\bodylocation
+	
+	\hypericon{tel:522222650774}{faPhone}
+	\bodyworkphone
+	
+	\hypericon{mailto:jesugq@gmail.com}{faEnvelope}
+	\bodyworkmail
+}
+
+% Command to output a vertical row of listing information.
+\newcommand{\doclisting}{
+	\spacing{-6}
+	\hypericon{https://github.com/jesugq}{faGithub}
+	\bodyrepository
+	
+	\hypericon{https://t.me/t522222650774}{faPaperPlane}
+	\hypericon{https://wa.me/+522222650774}{faWhatsapp}
+	\bodymessaging
+}
