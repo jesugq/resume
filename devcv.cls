@@ -54,10 +54,10 @@
 
 \geometry{
 	paper=a4paper, % Paper size, change to letterpaper for US letter size
-	top=1.25cm, % Top margin
-	bottom=1.25cm, % Bottom margin
-	left=1.25cm, % Left margin
-	right=1.25cm, % Right margin
+	top=1.5cm, % Top margin
+	bottom=1.5cm, % Bottom margin
+	left=1.5cm, % Left margin
+	right=1.5cm, % Right margin
 	headheight=0cm, % Header height
 	footskip=0cm, % Space from the bottom margin to the baseline of the footer
 	headsep=0.0cm, % Space from the top margin to the baseline of the header
@@ -187,6 +187,7 @@
 %----------------------------------------------------------------------------------------
 
 \usepackage{longtable} % Required for tables that span multiple pages
+\usepackage{enumitem} % Required for basic list environments
 \setlength{\LTpre}{0pt} % Remove default whitespace before longtable
 \setlength{\LTpost}{0pt} % Remove default whitespace after longtable
 
@@ -194,7 +195,7 @@
 
 % Environment to hold a new list of entries
 \newenvironment{entrylist}{
-	\begin{longtable}[H]{l l}
+	\begin{longtable}[H]{l}
 }{
 	\end{longtable}
 }
