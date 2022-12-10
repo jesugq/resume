@@ -22,6 +22,11 @@
 	{\Large\textcolor{cerulean}{#1}}
 }
 
+% Command to output small cerulean colored content.
+\newcommand{\smallcerulean}[1]{
+	{\small\textcolor{cerulean}{#1}}
+}
+
 % Command to output non-indented bolded content.
 \newcommand{\bold}[1]{
 	\hspace{-1.5mm}\textbf{#1}
@@ -40,6 +45,15 @@
 % Command to output a inserted vertical spacing.
 \newcommand{\spacing}[1]{
 	\vspace{#1mm}
+}
+
+% Command to output an itemized element with a cerulean bullet color.
+\newcommand{\cerumize}[1]{
+	\spacing{-2}
+	\begin{itemize}[label=\textcolor{cerulean}{\textbullet}]
+		\setlength{\parskip}{0mm}
+		#1
+	\end{itemize}
 }
 
 %----------------------------------------------------------------------------------------
@@ -89,4 +103,35 @@
 	\hypericon{\tme}{faPaperPlane}
 	\hypericon{\wame}{faWhatsapp}
 	\bodymessaging
+}
+
+% Command to output an education entry, complete with a date, title, place of origin and additional details.
+\newcommand{\doceducation}[4]{
+	\parbox[t]{1.01\columnwidth}{
+		#1#2\hfill#3
+		
+		#4
+	}
+}
+
+% Command to output a bold engineering degree institute name.
+\newcommand{\docengineeringinstitute}{
+	\bold{\bodyengineeringinstitute}
+}
+
+% Command to output a cerulean engineering degree location of studies.
+\newcommand{\docengineeringlocation}{
+	\smallcerulean{\bodyengineeringlocation}
+}
+
+% Command to output a cerulean engineering degree date of graduation.
+\newcommand{\docengineeringdate}{
+	\smallcerulean{\bodyengineeringdate}
+}
+
+% Command to output an itemized engineering degree's details.
+\newcommand{\docengineeringdetails}{
+	\cerumize{
+		\item\bodyengineeringdetails\hypericon{\tec}{faCheckCircle}
+	}
 }
