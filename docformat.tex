@@ -17,6 +17,11 @@
 	\hspace{-3.5mm}{\HUGE\textbf{#1}}
 }
 
+% Command to output centered strong cerulean content.
+\newcommand{\strongcerulean}[1]{
+	{\large\textcolor{cerulean}{\textbf{#1}}}
+}
+
 % Command to output large cerulean colored content.
 \newcommand{\largecerulean}[1]{
 	{\Large\textcolor{cerulean}{#1}}
@@ -103,6 +108,15 @@
 	\hypericon{\tme}{faPaperPlane}
 	\hypericon{\wame}{faWhatsapp}
 	\bodymessaging
+}
+
+% Command to output a horizontal line with a title name.
+\newcommand{\docsection}[1]{
+	\spacing{2}
+	\cerulean{\hrulefill}
+	\strongcerulean{#1}
+	\cerulean{\hrulefill}
+	\spacing{2}
 }
 
 % Command to output an education entry, complete with a date, title, place of origin and additional details.
