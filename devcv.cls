@@ -44,7 +44,7 @@
 
 \pagestyle{empty} % No headers or footers
 
-\usepackage{moresize} % Provides more font size commands (\HUGE and \ssmall)
+\usepackage{moresize} % Provides more font size commands (\HUGE and \small)
 
 %----------------------------------------------------------------------------------------
 %	PAGE LAYOUT

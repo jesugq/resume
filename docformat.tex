@@ -19,7 +19,7 @@
 
 % Command to output centered strong cerulean content.
 \newcommand{\strongcerulean}[1]{
-	{\large\textcolor{cerulean}{\textbf{#1}}}
+	\textcolor{cerulean}{\textbf{#1}}
 }
 
 % Command to output large cerulean colored content.
@@ -39,7 +39,7 @@
 
 % Command to output non-indented italic content.
 \newcommand{\italic}[1]{
-	\hspace{-1.5mm}{\textit{#1}}
+	\hspace{-1.5mm}\textit{#1}
 }
 
 % Command to output cerulean colored content.
@@ -47,16 +47,21 @@
 	\textcolor{cerulean}{#1}
 }
 
-% Command to output a inserted vertical spacing.
+% Command to output an inserted vertical spacing.
 \newcommand{\spacing}[1]{
 	\vspace{#1mm}
 }
 
-% Command to output an itemized element with a cerulean bullet color.
+% Command to output an inserted hortizontal separation.
+\newcommand{\separation}[1]{
+	\hspace{#1mm}
+}
+
 \newcommand{\cerumize}[1]{
-	\spacing{-2}
+	\vspace{-2mm}
+	\renewcommand*\do[1]{\item ##1}
 	\begin{itemize}[label=\textcolor{cerulean}{\textbullet}]
-		\setlength{\parskip}{0mm}
+		\setlength{\parskip}{0pt}
 		#1
 	\end{itemize}
 }
@@ -67,7 +72,7 @@
 
 % Command to output a header with three elements, a large short name, personal information, and contact information.
 \newcommand{\docperson}[3]{
-	\parbox[t]{0.60\columnwidth}{ % Occupy half of the column width to place a short name
+	\parbox[t]{0.55\columnwidth}{ % Occupy half of the column width to place a short name
 		#1
 	}
 	\parbox[t]{0.20\columnwidth}{ % Occupy a quarter of the column width to place personal information
@@ -102,7 +107,7 @@
 % Command to output a vertical row of listing information.
 \newcommand{\doclisting}{
 	\spacing{-6}
-	\hypericon{\github}{faGithub}
+	\hypericon{\git}{faGithub}
 	\bodyrepository
 	
 	\hypericon{\tme}{faPaperPlane}
@@ -119,18 +124,57 @@
 	\spacing{2}
 }
 
-% Command to output an education entry, complete with a date, title, place of origin and additional details.
+% Command to output an education entry.
 \newcommand{\doceducation}[4]{
-	\parbox[t]{1.01\columnwidth}{
-		#1#2\hfill#3
+	\parbox[t]{0.95\columnwidth}{
+		#1\hfill#2
 		
-		#4
+		#4\hfill#3
 	}
+}
+
+% Command to output an experience entry.
+\newcommand{\docexperience}[5]{
+	\parbox[t]{0.95\columnwidth}{
+		#1\hfill#3
+		
+		#2\hfill#4
+		
+		#5
+	}
+}
+
+%----------------------------------------------------------------------------------------
+%	TEXLIVE STRINGS
+%----------------------------------------------------------------------------------------
+
+% Command to output a bold citi banamex corporation name.
+\newcommand{\doccitibanamexcorporation}{
+	\bold{\bodycitibanamexcorporation}\separation{-4}\hypericon{\citi}{faGlobe}
+}
+
+% Command to output a citi banamex position name.
+\newcommand{\doccitibanamexposition}{
+	\bodycitibanamexposition
+}
+
+% Command to output a cerulean citi banamex office location.
+\newcommand{\doccitibanamexoffice}{
+	\smallcerulean{\bodycitibanamexoffice}
+}
+
+% Command to output a cerulean citi banamex working period.
+\newcommand{\doccitibanamexperiod}{
+	\smallcerulean{\bodycitibanamexperiod}
+}
+
+\newcommand{\doccitibanamexdetails}{
+	\cerumize{\bodycitibanamexdetails}
 }
 
 % Command to output a bold engineering degree institute name.
 \newcommand{\docengineeringinstitute}{
-	\bold{\bodyengineeringinstitute}
+	\bold{\bodyengineeringinstitute}\separation{-4}\hypericon{\tec}{faGlobe}
 }
 
 % Command to output a cerulean engineering degree location of studies.
@@ -145,7 +189,5 @@
 
 % Command to output an itemized engineering degree's details.
 \newcommand{\docengineeringdetails}{
-	\cerumize{
-		\item\bodyengineeringdetails\hypericon{\tec}{faCheckCircle}
-	}
+	\bodyengineeringdetails\hypericon{\engi}{faGraduationCap}
 }
