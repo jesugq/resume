@@ -74,9 +74,11 @@
 %\usepackage[default]{raleway}
 %\usepackage[defaultsans]{droidsans}
 %\usepackage{cmbright}
-\usepackage{fetamont}
+%\usepackage{fetamont}
 %\usepackage[default]{gillius}
 %\usepackage{roboto}
+%\usepackage{charter}
+\usepackage{libertinus}
 
 %\renewcommand*\familydefault{\sfdefault} % Force the sans-serif version of any font used
 

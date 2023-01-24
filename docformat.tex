@@ -32,6 +32,11 @@
 	{\small\textcolor{cerulean}{#1}}
 }
 
+% Command to output small minted content.
+\newcommand{\smallmint}[2]{
+	\mintinline[escapeinside=||,fontfamily=helvetica,fontsize=\footnotesize]{#1}{#2}
+}
+
 % Command to output non-indented bolded content.
 \newcommand{\bold}[1]{
 	\hspace{-1.5mm}\textbf{#1}
@@ -40,11 +45,6 @@
 % Command to output non-indented italic content.
 \newcommand{\italic}[1]{
 	\hspace{-1.5mm}\textit{#1}
-}
-
-% Command to output minted content.
-\newcommand{\mints}[2]{
-	\mintinline[escapeinside=||]{#1}{#2}
 }
 
 % Command to output cerulean colored content.
@@ -155,13 +155,13 @@
 
 % Command to output citi banamex experience content.
 \newcommand{\doccitibanamexcorporation}{
-	\bold{\bodycitibanamexcorporation}\separation{-4}\hypericon{\citi}{faGlobe}
+	\bold{\bodycitibanamexcorporation}\separation{-3}\hypericon{\citi}{faGlobe}
 }
 \newcommand{\doccitibanamexposition}{
 	\bodycitibanamexposition
 }
 \newcommand{\doccitibanamextechnology}{
-	\mints{xml}{|\bodycitibanamextechnology|}
+	\smallmint{xml}{|\bodycitibanamextechnology|}
 }
 \newcommand{\doccitibanamexoffice}{
 	\smallcerulean{\bodycitibanamexoffice}
@@ -175,13 +175,13 @@
 
 % Command to output anzen soluciones experience content.
 \newcommand{\docanzensolucionescorporation}{
-	\bold{\bodyanzensolucionescorporation}\separation{-4}\hypericon{\anzen}{faGlobe}
+	\bold{\bodyanzensolucionescorporation}\separation{-3}\hypericon{\anzen}{faGlobe}
 }
 \newcommand{\docanzensolucionesposition}{
 	\bodyanzensolucionesposition
 }
 \newcommand{\docanzensolucionestechnology}{
-	\mints{xml}{|\bodyanzensolucionestechnology|}
+	\smallmint{xml}{|\bodyanzensolucionestechnology|}
 }
 \newcommand{\docanzensolucionesoffice}{
 	\smallcerulean{\bodyanzensolucionesoffice}
@@ -195,7 +195,7 @@
 
 % Command to outout engineering education content.
 \newcommand{\docengineeringinstitute}{
-	\bold{\bodyengineeringinstitute}\separation{-4}\hypericon{\tec}{faGlobe}
+	\bold{\bodyengineeringinstitute}\separation{-3}\hypericon{\tec}{faGlobe}
 }
 \newcommand{\docengineeringlocation}{
 	\smallcerulean{\bodyengineeringlocation}
