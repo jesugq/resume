@@ -42,6 +42,11 @@
 	\hspace{-1.5mm}\textit{#1}
 }
 
+% Command to output minted content.
+\newcommand{\mints}[2]{
+	\mintinline[escapeinside=||]{#1}{#2}
+}
+
 % Command to output cerulean colored content.
 \newcommand{\cerulean}[1]{
 	\textcolor{cerulean}{#1}
@@ -61,7 +66,7 @@
 	\vspace{-2mm}
 	\renewcommand*\do[1]{\item ##1}
 	\begin{itemize}[label=\textcolor{cerulean}{\textbullet}]
-		\setlength{\parskip}{0pt}
+		\setlength{\parskip}{0mm}
 		#1
 	\end{itemize}
 }
@@ -134,13 +139,13 @@
 }
 
 % Command to output an experience entry.
-\newcommand{\docexperience}[5]{
+\newcommand{\docexperience}[6]{
 	\parbox[t]{0.95\columnwidth}{
-		#1\hfill#3
+		#1\hfill#4
 		
-		#2\hfill#4
+		#2#3\hfill#5
 		
-		#5
+		#6
 	}
 }
 
@@ -148,46 +153,56 @@
 %	TEXLIVE STRINGS
 %----------------------------------------------------------------------------------------
 
-% Command to output a bold citi banamex corporation name.
+% Command to output citi banamex experience content.
 \newcommand{\doccitibanamexcorporation}{
 	\bold{\bodycitibanamexcorporation}\separation{-4}\hypericon{\citi}{faGlobe}
 }
-
-% Command to output a citi banamex position name.
 \newcommand{\doccitibanamexposition}{
 	\bodycitibanamexposition
 }
-
-% Command to output a cerulean citi banamex office location.
+\newcommand{\doccitibanamextechnology}{
+	\mints{xml}{|\bodycitibanamextechnology|}
+}
 \newcommand{\doccitibanamexoffice}{
 	\smallcerulean{\bodycitibanamexoffice}
 }
-
-% Command to output a cerulean citi banamex working period.
 \newcommand{\doccitibanamexperiod}{
 	\smallcerulean{\bodycitibanamexperiod}
 }
-
 \newcommand{\doccitibanamexdetails}{
 	\cerumize{\bodycitibanamexdetails}
 }
 
-% Command to output a bold engineering degree institute name.
+% Command to output anzen soluciones experience content.
+\newcommand{\docanzensolucionescorporation}{
+	\bold{\bodyanzensolucionescorporation}\separation{-4}\hypericon{\anzen}{faGlobe}
+}
+\newcommand{\docanzensolucionesposition}{
+	\bodyanzensolucionesposition
+}
+\newcommand{\docanzensolucionestechnology}{
+	\mints{xml}{|\bodyanzensolucionestechnology|}
+}
+\newcommand{\docanzensolucionesoffice}{
+	\smallcerulean{\bodyanzensolucionesoffice}
+}
+\newcommand{\docanzensolucionesperiod}{
+	\smallcerulean{\bodyanzensolucionesperiod}
+}
+\newcommand{\docanzensolucionesdetails}{
+	\cerumize{\bodyanzensolucionesdetails}
+}
+
+% Command to outout engineering education content.
 \newcommand{\docengineeringinstitute}{
 	\bold{\bodyengineeringinstitute}\separation{-4}\hypericon{\tec}{faGlobe}
 }
-
-% Command to output a cerulean engineering degree location of studies.
 \newcommand{\docengineeringlocation}{
 	\smallcerulean{\bodyengineeringlocation}
 }
-
-% Command to output a cerulean engineering degree date of graduation.
 \newcommand{\docengineeringdate}{
 	\smallcerulean{\bodyengineeringdate}
 }
-
-% Command to output an itemized engineering degree's details.
 \newcommand{\docengineeringdetails}{
 	\bodyengineeringdetails\hypericon{\engi}{faGraduationCap}
 }
