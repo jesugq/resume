@@ -147,12 +147,10 @@
 	}
 }
 
-% Command to output an education entry.
-\newcommand{\doceducation}[4]{
+% Command to output a certificate entry.
+\newcommand{\doccertificate}[3]{
 	\parbox[t]{0.95\columnwidth}{
-		#1\hfill#2
-		
-		#4\hfill#3
+		#1 #2\hfill#3
 	}
 }
 
@@ -165,10 +163,12 @@
 	}
 }
 
-% Command to output a certificate entry.
-\newcommand{\doccertificate}[3]{
+% Command to output an education entry.
+\newcommand{\doceducation}[4]{
 	\parbox[t]{0.95\columnwidth}{
-		#1 #2\hfill#3
+		#1\hfill#2
+		
+		#4\hfill#3
 	}
 }
 
@@ -218,23 +218,6 @@
 }
 \newcommand{\docanzensolucionesdetails}{
 	\cerumize{\bodyanzensolucionesdetails}
-}
-
-% Command to output a google homepage project.
-\newcommand{\docgooglehomepagetitle}{
-	\bold{\bodygooglehomepagetitle}
-	\separation{-2}
-	\hypericon{https://jesugq.github.io/google-homepage}{faColumns}
-	\hypericon{https://github.com/jesugq/google-homepage}{faGithub}
-}
-\newcommand{\docgooglehomepagelanguage}{
-	\footnotemint{xml}{|\bodygooglehomepagelanguage|}
-}
-\newcommand{\docgooglehomepagedate}{
-	\smallcerulean{\bodygooglehomepagedate}
-}
-\newcommand{\docgooglehomepagedetails}{
-	\cerumize{\bodygooglehomepagedetails}
 }
 
 % Command to output a professional cloud developer certificate.
@@ -307,6 +290,23 @@
 	\href
 		{https://www.freecodecamp.org/certification/jesugq/responsive-web-design}
 		{\includegraphics[width=16mm,height=16mm]{responsivewebdesign}}
+}
+
+% Command to output a google homepage project.
+\newcommand{\docgooglehomepagetitle}{
+	\bold{\bodygooglehomepagetitle}
+	\separation{-2}
+	\hypericon{https://jesugq.github.io/google-homepage}{faColumns}
+	\hypericon{https://github.com/jesugq/google-homepage}{faGithub}
+}
+\newcommand{\docgooglehomepagelanguage}{
+	\footnotemint{xml}{|\bodygooglehomepagelanguage|}
+}
+\newcommand{\docgooglehomepagedate}{
+	\smallcerulean{\bodygooglehomepagedate}
+}
+\newcommand{\docgooglehomepagedetails}{
+	\cerumize{\bodygooglehomepagedetails}
 }
 
 % Command to outout engineering education content.
