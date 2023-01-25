@@ -69,6 +69,7 @@
 		\setlength{\parskip}{0mm}
 		#1
 	\end{itemize}
+	\vspace{-2mm}
 }
 
 %----------------------------------------------------------------------------------------
@@ -77,14 +78,10 @@
 
 % Command to output a header with three elements, a large short name, personal information, and contact information.
 \newcommand{\docperson}[3]{
-	\parbox[t]{0.55\columnwidth}{ % Occupy half of the column width to place a short name
-		#1
-	}
-	\parbox[t]{0.20\columnwidth}{ % Occupy a quarter of the column width to place personal information
-		#2
-	}
-	\parbox[t]{0.20\columnwidth}{ % Occupy a quarter of the column width to place contact information
-		#3
+	\parbox[t]{0.50\columnwidth}{#1}
+	\parbox[t]{0.46\columnwidth}{
+		\parbox[t]{0.18\columnwidth}{#2}
+		\parbox[t]{0.2775\columnwidth}{#3}
 	}
 }
 
@@ -99,7 +96,7 @@
 
 % Command to output a vertical row of contact information.
 \newcommand{\doccontact}{
-	\spacing{-6}
+	\spacing{-4}
 	\hypericon{https://goo.gl/maps/huNs7LUryooCMQML8}{faMapMarker}
 	\bodylocation
 	
@@ -113,32 +110,30 @@
 % Command to output a vertical row of listing information.
 \newcommand{\doclisting}{
 	\spacing{-6}
-	\hypericon{https://github.com/jesugq}{faGithub}
-	\bodyrepository
-	
-	\hypericon{https://t.me/t522222650774}{faPaperPlane}
-	\hypericon{https://wa.me/+522222650774}{faWhatsapp}
-	\bodymessaging
+	\docshowcase
+		{\docprofessionalclouddeveloperimage}
+		{\docassociatecloudengineerimage}
+		{\docscrumfoundationprofessionalimage}
 }
 
 % Command to output a horizontal line with a title name.
 \newcommand{\docsection}[1]{
 	\spacing{2}
 	\cerulean{\hrulefill}
-	\strongcerulean{#1}
+	\cerulean{#1}
 	\cerulean{\hrulefill}
 	\spacing{2}
 }
 
 % Command to output a horizontally centered block of elements.
-\newcommand{\docshowcase}[4]{
+\newcommand{\docshowcase}[3]{
 	\hfill
 	\parbox[t]{16mm}{#1}
+	\separation{-4}
 	\parbox[t]{16mm}{#2}
+	\separation{-4}
 	\parbox[t]{16mm}{#3}
-	\parbox[t]{16mm}{#4}
-	\hfill
-	\spacing{2}
+	\separation{-4}
 }
 
 % Command to output an experience entry.
@@ -152,13 +147,6 @@
 	}
 }
 
-% Command to output a certificate entry.
-\newcommand{\doccertificate}[3]{
-	\parbox[t]{0.95\columnwidth}{
-		#1 #2\hfill#3
-	}
-}
-
 % Command to output an education entry.
 \newcommand{\doceducation}[4]{
 	\parbox[t]{0.95\columnwidth}{
@@ -168,13 +156,31 @@
 	}
 }
 
+% Command to output a project entry,
+\newcommand{\docproject}[4]{
+	\parbox[t]{0.95\columnwidth}{
+		#1#2\hfill#3
+		
+		#4
+	}
+}
+
+% Command to output a certificate entry.
+\newcommand{\doccertificate}[3]{
+	\parbox[t]{0.95\columnwidth}{
+		#1 #2\hfill#3
+	}
+}
+
 %----------------------------------------------------------------------------------------
 %	TEXLIVE STRINGS
 %----------------------------------------------------------------------------------------
 
 % Command to output citi banamex experience content.
 \newcommand{\doccitibanamexcorporation}{
-	\bold{\bodycitibanamexcorporation}\separation{-3}\hypericon{https://www.banamex.com}{faGlobe}
+	\bold{\bodycitibanamexcorporation}
+	\separation{-2}
+	\hypericon{https://www.banamex.com}{faGlobe}
 }
 \newcommand{\doccitibanamexposition}{
 	\bodycitibanamexposition
@@ -194,7 +200,9 @@
 
 % Command to output anzen soluciones experience content.
 \newcommand{\docanzensolucionescorporation}{
-	\bold{\bodyanzensolucionescorporation}\separation{-3}\hypericon{https://www.anzen.com.mx}{faGlobe}
+	\bold{\bodyanzensolucionescorporation}
+	\separation{-2}
+	\hypericon{https://www.anzen.com.mx}{faGlobe}
 }
 \newcommand{\docanzensolucionesposition}{
 	\bodyanzensolucionesposition
@@ -288,7 +296,7 @@
 \newcommand{\docengineeringinstitute}{
 	\bold{\bodyengineeringinstitute}
 	\separation{-2}
-	\hypericon{https://tec.mx/}{faGlobe}
+	\hypericon{https://certificados.tec.mx/certificate/dd14d13b16e750099a9783188f343e25}{faCheckCircle}
 }
 \newcommand{\docengineeringlocation}{
 	\smallcerulean{\bodyengineeringlocation}
@@ -297,5 +305,5 @@
 	\smallcerulean{\bodyengineeringdate}
 }
 \newcommand{\docengineeringdetails}{
-	\bodyengineeringdetails\hypericon{https://certificados.tec.mx/certificate/dd14d13b16e750099a9783188f343e25}{faGraduationCap}
+	\bodyengineeringdetails
 }
