@@ -32,8 +32,8 @@
 	{\small\textcolor{cerulean}{#1}}
 }
 
-% Command to output small minted content.
-\newcommand{\smallmint}[2]{
+% Command to output footnote minted content.
+\newcommand{\footnotemint}[2]{
 	\mintinline[escapeinside=||,fontfamily=helvetica,fontsize=\footnotesize]{#1}{#2}
 }
 
@@ -93,6 +93,7 @@
 	\hugebold{\bodyrealname}
 	\spacing{2}
 	
+	\separation{-4}
 	\largecerulean{\bodydiploma}
 }
 
@@ -129,13 +130,15 @@
 	\spacing{2}
 }
 
-% Command to output an education entry.
-\newcommand{\doceducation}[4]{
-	\parbox[t]{0.95\columnwidth}{
-		#1\hfill#2
-		
-		#4\hfill#3
-	}
+% Command to output a horizontally centered block of elements.
+\newcommand{\docshowcase}[4]{
+	\hfill
+	\parbox[t]{16mm}{#1}
+	\parbox[t]{16mm}{#2}
+	\parbox[t]{16mm}{#3}
+	\parbox[t]{16mm}{#4}
+	\hfill
+	\spacing{2}
 }
 
 % Command to output an experience entry.
@@ -146,6 +149,22 @@
 		#2#3\hfill#5
 		
 		#6
+	}
+}
+
+% Command to output a certificate entry.
+\newcommand{\doccertificate}[3]{
+	\parbox[t]{0.95\columnwidth}{
+		#1 #2\hfill#3
+	}
+}
+
+% Command to output an education entry.
+\newcommand{\doceducation}[4]{
+	\parbox[t]{0.95\columnwidth}{
+		#1\hfill#2
+		
+		#4\hfill#3
 	}
 }
 
@@ -161,7 +180,7 @@
 	\bodycitibanamexposition
 }
 \newcommand{\doccitibanamextechnology}{
-	\smallmint{xml}{|\bodycitibanamextechnology|}
+	\footnotemint{xml}{|\bodycitibanamextechnology|}
 }
 \newcommand{\doccitibanamexoffice}{
 	\smallcerulean{\bodycitibanamexoffice}
@@ -181,7 +200,7 @@
 	\bodyanzensolucionesposition
 }
 \newcommand{\docanzensolucionestechnology}{
-	\smallmint{xml}{|\bodyanzensolucionestechnology|}
+	\footnotemint{xml}{|\bodyanzensolucionestechnology|}
 }
 \newcommand{\docanzensolucionesoffice}{
 	\smallcerulean{\bodyanzensolucionesoffice}
@@ -193,9 +212,83 @@
 	\cerumize{\bodyanzensolucionesdetails}
 }
 
+% Command to output a professional cloud developer certificate.
+\newcommand{\docprofessionalclouddevelopername}{
+	\bold{\bodyprofessionalclouddevelopername}
+	\separation{-2}
+	\hypericon{https://www.credential.net/f05088e4-157e-40be-8d4f-b918be06f6c9}{faCheckCircle}
+}
+\newcommand{\docprofessionalclouddeveloperissuer}{
+	\footnotemint{xml}{|\bodyprofessionalclouddeveloperissuer|}
+}
+\newcommand{\docprofessionalclouddevelopertime}{
+	\smallcerulean{\bodyprofessionalclouddevelopertime}
+}
+\newcommand{\docprofessionalclouddeveloperimage}{
+	\href
+		{https://www.credential.net/f05088e4-157e-40be-8d4f-b918be06f6c9}
+		{\includegraphics[width=16mm,height=16mm]{professionalclouddeveloper}}
+}
+
+% Command to output an associate cloud engineer certificate.
+\newcommand{\docassociatecloudengineername}{
+	\bold{\bodyassociatecloudengineername}
+	\separation{-2}
+	\hypericon{https://www.credential.net/59c21655-2c0d-4803-ba06-3bad73fa3b69}{faCheckCircle}
+}
+\newcommand{\docassociatecloudengineerissuer}{
+	\footnotemint{xml}{|\bodyassociatecloudengineerissuer|}
+}
+\newcommand{\docassociatecloudengineertime}{
+	\smallcerulean{\bodyassociatecloudengineertime}
+}
+\newcommand{\docassociatecloudengineerimage}{
+	\href
+		{https://www.credential.net/59c21655-2c0d-4803-ba06-3bad73fa3b69}
+		{\includegraphics[width=16mm,height=16mm]{associatecloudengineer}}
+}
+
+% Command to output a scrum foundation professional certificate.
+\newcommand{\docscrumfoundationprofessionalname}{
+	\bold{\bodyscrumfoundationprofessionalname}
+	\separation{-2}
+	\hypericon{https://www.credly.com/badges/769ad27d-6a5c-4c5a-9086-a423050de058/public_url}{faCheckCircle}
+}
+\newcommand{\docscrumfoundationprofessionalissuer}{
+	\footnotemint{xml}{|\bodyscrumfoundationprofessionalissuer|}
+}
+\newcommand{\docscrumfoundationprofessionaltime}{
+	\smallcerulean{\bodyscrumfoundationprofessionaltime}
+}
+\newcommand{\docscrumfoundationprofessionalimage}{
+	\href
+		{https://www.credly.com/badges/769ad27d-6a5c-4c5a-9086-a423050de058/public_url}
+		{\includegraphics[width=16mm,height=16mm]{scrumfoundationprofessional}}	
+}
+
+% Command to output a responsive web design certificate.
+\newcommand{\docresponsivewebdesignname}{
+	\bold{\bodyresponsivewebdesignname}
+	\separation{-2}
+	\hypericon{https://www.freecodecamp.org/certification/jesugq/responsive-web-design}{faCheckCircle}
+}
+\newcommand{\docresponsivewebdesignissuer}{
+	\footnotemint{xml}{|\bodyresponsivewebdesignissuer|}
+}
+\newcommand{\docresponsivewebdesigntime}{
+	\smallcerulean{\bodyresponsivewebdesigntime}
+}
+\newcommand{\docresponsivewebdesignimage}{
+	\href
+		{https://www.freecodecamp.org/certification/jesugq/responsive-web-design}
+		{\includegraphics[width=16mm,height=16mm]{responsivewebdesign}}
+}
+
 % Command to outout engineering education content.
 \newcommand{\docengineeringinstitute}{
-	\bold{\bodyengineeringinstitute}\separation{-3}\hypericon{https://tec.mx/}{faGlobe}
+	\bold{\bodyengineeringinstitute}
+	\separation{-2}
+	\hypericon{https://tec.mx/}{faGlobe}
 }
 \newcommand{\docengineeringlocation}{
 	\smallcerulean{\bodyengineeringlocation}

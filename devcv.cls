@@ -103,6 +103,9 @@
 %	GRAPHICS DEFINITIONS
 %---------------------------------------------------------------------------------------- 
 
+\usepackage{graphicx} % Enables image attachment
+\graphicspath{{./images/}} % Default path for images
+
 %\usepackage{tikz} % Required for creating the plots
 %\usetikzlibrary{shapes, backgrounds}
 %\tikzset{x=1cm, y=1cm} % Default tikz units
@@ -118,7 +121,7 @@
 %	CHARTS
 %---------------------------------------------------------------------------------------- 
 
-\newcounter{barcount}
+%\newcounter{barcount}
 
 % Environment to hold a new bar chart
 %\newenvironment{barchart}[1]{ % The only parameter is the maximum bar width, in cm
