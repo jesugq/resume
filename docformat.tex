@@ -118,7 +118,6 @@
 
 % Command to output a horizontal line with a title name.
 \newcommand{\docsection}[1]{
-	\spacing{2}
 	\cerulean{\hrulefill}
 	\cerulean{#1}
 	\cerulean{\hrulefill}
@@ -138,6 +137,7 @@
 
 % Command to output an experience entry.
 \newcommand{\docexperience}[6]{
+	\vspace{1mm}
 	\parbox[t]{0.95\columnwidth}{
 		#1\hfill#4
 		
@@ -149,6 +149,7 @@
 
 % Command to output a certificate entry.
 \newcommand{\doccertificate}[3]{
+	\vspace{1mm}
 	\parbox[t]{0.95\columnwidth}{
 		#1 #2\hfill#3
 	}
@@ -156,6 +157,7 @@
 
 % Command to output a project entry,
 \newcommand{\docproject}[4]{
+	\vspace{1mm}
 	\parbox[t]{0.95\columnwidth}{
 		#1#2\hfill#3
 		
@@ -165,6 +167,7 @@
 
 % Command to output an education entry.
 \newcommand{\doceducation}[4]{
+	\vspace{1mm}
 	\parbox[t]{0.95\columnwidth}{
 		#1\hfill#2
 		
@@ -291,6 +294,24 @@
 		{https://www.freecodecamp.org/certification/jesugq/responsive-web-design}
 		{\includegraphics[width=16mm,height=16mm]{responsivewebdesign}}
 }
+
+% Command to output a latex resume project.
+
+\newcommand{\doclatexresumetitle}{
+	\bold{\bodylatexresumetitle}
+	\separation{-2}
+	\hypericon{https://github.com/jesugq/resume}{faGithub}
+}
+\newcommand{\doclatexresumelanguage}{
+	\footnotemint{xml}{|\bodylatexresumelanguage|}
+}
+\newcommand{\doclatexresumedate}{
+	\smallcerulean{\bodylatexresumedate}
+}
+\newcommand{\doclatexresumedetails}{
+	\cerumize{\bodylatexresumedetails}
+}
+
 
 % Command to output a google homepage project.
 \newcommand{\docgooglehomepagetitle}{
