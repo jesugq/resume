@@ -52,6 +52,10 @@
 	\textcolor{cerulean}{#1}
 }
 
+\newcommand{\hidden}[1]{
+	\textcolor{white}{#1}
+}
+
 % Command to output an inserted vertical spacing.
 \newcommand{\spacing}[1]{
 	\vspace{#1mm}
@@ -154,7 +158,7 @@
 \newcommand{\doccertificate}[3]{
 	\vspace{1mm}
 	\parbox[t]{0.95\columnwidth}{
-		#1 #2\hfill#3
+		#1#2\hfill#3
 	}
 }
 
@@ -227,14 +231,14 @@
 }
 
 % Commands to output a professional cloud developer certificate.
+\newcommand{\docprofessionalclouddeveloperissuer}{
+	\bold{\bodyprofessionalclouddeveloperissuer}
+}
 \newcommand{\docprofessionalclouddevelopername}{
-	\bold{\bodyprofessionalclouddevelopername}
-	\separation{-2}
 	\includegraphics[width=3mm,height=3mm]{professionalclouddeveloper}
 	\hypericon{https://www.credential.net/f05088e4-157e-40be-8d4f-b918be06f6c9}{faExternalLink}
-}
-\newcommand{\docprofessionalclouddeveloperissuer}{
-	\footnotemint{xml}{|\bodyprofessionalclouddeveloperissuer|}
+	\separation{0}
+	\bodyprofessionalclouddevelopername
 }
 \newcommand{\docprofessionalclouddevelopertime}{
 	\smallcerulean{\bodyprofessionalclouddevelopertime}
@@ -246,14 +250,15 @@
 }
 
 % Commands to output an associate cloud engineer certificate.
+\newcommand{\docassociatecloudengineerissuer}{
+	\bold{\hidden{\bodyassociatecloudengineerissuer}}
+	\separation{-3.5}
+}
 \newcommand{\docassociatecloudengineername}{
-	\bold{\bodyassociatecloudengineername}
-	\separation{-2}
 	\includegraphics[width=3mm,height=3mm]{associatecloudengineer}
 	\hypericon{https://www.credential.net/59c21655-2c0d-4803-ba06-3bad73fa3b69}{faExternalLink}
-}
-\newcommand{\docassociatecloudengineerissuer}{
-	\footnotemint{xml}{|\bodyassociatecloudengineerissuer|}
+	\separation{0}
+	\bodyassociatecloudengineername
 }
 \newcommand{\docassociatecloudengineertime}{
 	\smallcerulean{\bodyassociatecloudengineertime}
@@ -265,14 +270,15 @@
 }
 
 % Commands to output a scrum foundation professional certificate.
+\newcommand{\docscrumfoundationprofessionalissuer}{
+	\bold{\bodyscrumfoundationprofessionalissuer}
+	\separation{19.1}
+}
 \newcommand{\docscrumfoundationprofessionalname}{
-	\bold{\bodyscrumfoundationprofessionalname}
-	\separation{-2}
 	\includegraphics[width=3mm,height=3mm]{scrumfoundationprofessional}
 	\hypericon{https://www.credly.com/badges/769ad27d-6a5c-4c5a-9086-a423050de058/public_url}{faExternalLink}
-}
-\newcommand{\docscrumfoundationprofessionalissuer}{
-	\footnotemint{xml}{|\bodyscrumfoundationprofessionalissuer|}
+	\separation{0}
+	\bodyscrumfoundationprofessionalname
 }
 \newcommand{\docscrumfoundationprofessionaltime}{
 	\smallcerulean{\bodyscrumfoundationprofessionaltime}
@@ -284,14 +290,15 @@
 }
 
 % Commands to output a responsive web design certificate.
+\newcommand{\docresponsivewebdesignissuer}{
+	\bold{\bodyresponsivewebdesignissuer}
+	\separation{10.4}
+}
 \newcommand{\docresponsivewebdesignname}{
-	\bold{\bodyresponsivewebdesignname}
-	\separation{-2}
 	\includegraphics[width=3mm,height=3mm]{responsivewebdesign}
 	\hypericon{https://www.freecodecamp.org/certification/jesugq/responsive-web-design}{faExternalLink}
-}
-\newcommand{\docresponsivewebdesignissuer}{
-	\footnotemint{xml}{|\bodyresponsivewebdesignissuer|}
+	\separation{0}
+	\bodyresponsivewebdesignname
 }
 \newcommand{\docresponsivewebdesigntime}{
 	\smallcerulean{\bodyresponsivewebdesigntime}

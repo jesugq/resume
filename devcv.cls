@@ -86,7 +86,7 @@
 
 \definecolor{cerulean}{RGB}{4,146,194} % Create the commonly used cerulean text color
 
-\usepackage{minted} % Provide inline code functionality
+\usepackage{minted} % Provides inline code functionality
 
 %------------------------------------------------
 
