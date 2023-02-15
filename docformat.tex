@@ -4,12 +4,12 @@
 
 % Command to output a non-intended hyperlink in the form of a cerulean colored font awesome icon.
 \newcommand{\hypericon}[2]{
-	\hspace{1mm}\href{#1}{\textcolor{cerulean}{\makebox[1mm]{\csname #2\endcsname}}}
+	\href{#1}{\textcolor{cerulean}{\makebox[2mm]{\csname #2\endcsname}}}
 }
 
 % Command to output a small box containing a font awesome icon.
 \newcommand{\favicon}[1]{
-	\cerulean{\makebox(2, 7.5){\csname#1\endcsname}}
+	\cerulean{\makebox(8, 8){\csname#1\endcsname}}
 }
 
 % Command to output non-intented huge bolded content.
@@ -96,12 +96,15 @@
 
 % Command to output a vertical row of contact information.
 \newcommand{\doccontact}{
-	\spacing{-4}
+	\spacing{-6.5}
 	\hypericon{https://goo.gl/maps/huNs7LUryooCMQML8}{faMapMarker}
 	\bodylocation
 	
 	\hypericon{tel:522222650774}{faPhone}
 	\bodyworkphone
+	
+	\hypericon{https://github.com/jesugq}{faGithub}
+	\bodyusername
 	
 	\hypericon{mailto:jesugq@gmail.com}{faEnvelope}
 	\bodyworkmail
@@ -227,7 +230,8 @@
 \newcommand{\docprofessionalclouddevelopername}{
 	\bold{\bodyprofessionalclouddevelopername}
 	\separation{-2}
-	\hypericon{https://www.credential.net/f05088e4-157e-40be-8d4f-b918be06f6c9}{faCheckCircle}
+	\includegraphics[width=3mm,height=3mm]{professionalclouddeveloper}
+	\hypericon{https://www.credential.net/f05088e4-157e-40be-8d4f-b918be06f6c9}{faExternalLink}
 }
 \newcommand{\docprofessionalclouddeveloperissuer}{
 	\footnotemint{xml}{|\bodyprofessionalclouddeveloperissuer|}
@@ -245,7 +249,8 @@
 \newcommand{\docassociatecloudengineername}{
 	\bold{\bodyassociatecloudengineername}
 	\separation{-2}
-	\hypericon{https://www.credential.net/59c21655-2c0d-4803-ba06-3bad73fa3b69}{faCheckCircle}
+	\includegraphics[width=3mm,height=3mm]{associatecloudengineer}
+	\hypericon{https://www.credential.net/59c21655-2c0d-4803-ba06-3bad73fa3b69}{faExternalLink}
 }
 \newcommand{\docassociatecloudengineerissuer}{
 	\footnotemint{xml}{|\bodyassociatecloudengineerissuer|}
@@ -263,7 +268,8 @@
 \newcommand{\docscrumfoundationprofessionalname}{
 	\bold{\bodyscrumfoundationprofessionalname}
 	\separation{-2}
-	\hypericon{https://www.credly.com/badges/769ad27d-6a5c-4c5a-9086-a423050de058/public_url}{faCheckCircle}
+	\includegraphics[width=3mm,height=3mm]{scrumfoundationprofessional}
+	\hypericon{https://www.credly.com/badges/769ad27d-6a5c-4c5a-9086-a423050de058/public_url}{faExternalLink}
 }
 \newcommand{\docscrumfoundationprofessionalissuer}{
 	\footnotemint{xml}{|\bodyscrumfoundationprofessionalissuer|}
@@ -281,7 +287,8 @@
 \newcommand{\docresponsivewebdesignname}{
 	\bold{\bodyresponsivewebdesignname}
 	\separation{-2}
-	\hypericon{https://www.freecodecamp.org/certification/jesugq/responsive-web-design}{faCheckCircle}
+	\includegraphics[width=3mm,height=3mm]{responsivewebdesign}
+	\hypericon{https://www.freecodecamp.org/certification/jesugq/responsive-web-design}{faExternalLink}
 }
 \newcommand{\docresponsivewebdesignissuer}{
 	\footnotemint{xml}{|\bodyresponsivewebdesignissuer|}

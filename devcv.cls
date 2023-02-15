@@ -61,7 +61,7 @@
 	headheight=0cm, % Header height
 	footskip=0cm, % Space from the bottom margin to the baseline of the footer
 	headsep=0.0cm, % Space from the top margin to the baseline of the header
-	showframe, % Uncomment to show how the type block is set on the page
+	%showframe, % Uncomment to show how the type block is set on the page
 }
 
 %----------------------------------------------------------------------------------------
