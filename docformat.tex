@@ -173,12 +173,12 @@
 }
 
 % Command to output an education entry.
-\newcommand{\doceducation}[4]{
+\newcommand{\doceducation}[5]{
 	\vspace{1mm}
 	\parbox[t]{0.95\columnwidth}{
-		#1\hfill#2
+		#1\hfill#3
 		
-		#4\hfill#3
+		#5#2\hfill#4
 	}
 }
 
@@ -314,6 +314,7 @@
 \newcommand{\doclatexresumetitle}{
 	\bold{\bodylatexresumetitle}
 	\separation{-2}
+	\hypericon{https://github.com/jesugq/resume/blob/master/resume.pdf}{faColumns}
 	\hypericon{https://github.com/jesugq/resume}{faGithub}
 }
 \newcommand{\doclatexresumelanguage}{
@@ -366,6 +367,9 @@
 	\bold{\bodyengineeringinstitute}
 	\separation{-2}
 	\hypericon{https://certificados.tec.mx/certificate/dd14d13b16e750099a9783188f343e25}{faCheckCircle}
+}
+\newcommand{\docengineeringlanguage}{
+	\footnotemint{xml}{|\bodyengineeringlanguage|}
 }
 \newcommand{\docengineeringlocation}{
 	\smallcerulean{\bodyengineeringlocation}
