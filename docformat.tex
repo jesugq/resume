@@ -66,6 +66,7 @@
 	\hspace{#1mm}
 }
 
+% Command to output cerulean colored lists.
 \newcommand{\cerumize}[1]{
 	\vspace{-2mm}
 	\renewcommand*\do[1]{\item ##1}
@@ -74,6 +75,12 @@
 		#1
 	\end{itemize}
 	\vspace{-2mm}
+}
+
+% Command to output a box of fixed size and indentation.
+\newcommand{\boxize}[2]{
+	\separation{-3.25}
+	\makebox[#1mm][l]{#2}
 }
 
 %----------------------------------------------------------------------------------------
@@ -126,7 +133,9 @@
 % Command to output a horizontal line with a title name.
 \newcommand{\docsection}[1]{
 	\cerulean{\hrulefill}
+	\hidden{q}
 	\cerulean{#1}
+	\hidden{p}
 	\cerulean{\hrulefill}
 	\spacing{2}
 }
@@ -140,6 +149,14 @@
 	\separation{-4}
 	\parbox[t]{16mm}{#3}
 	\separation{-4}
+}
+
+% Command to output a row of skills.
+\newcommand{\docskills}[2]{
+	\vspace{1mm}
+	\parbox[t]{0.95\columnwidth}{
+		#1#2
+	}
 }
 
 % Command to output an experience entry.
@@ -186,17 +203,40 @@
 %	TEXLIVE STRINGS
 %----------------------------------------------------------------------------------------
 
+% Commands to output development skills content.
+\newcommand{\docdevelopmentcategory}{
+	\boxize{25}{\bold{\bodydevelopmentcategory}}
+}
+\newcommand{\docdevelopmentdetails}{
+	\bodydevelopmentdetails
+}
+
+% Command to output discipline skills content.
+\newcommand{\docdisciplinecategory}{
+	\boxize{25}{\bold{\bodydisciplinecategory}}
+}
+\newcommand{\docdisciplinedetails}{
+	\bodydisciplinedetails
+}
+
+% Command to output environment skills content.
+\newcommand{\docenvironmentcategory}{
+	\boxize{25}{\bold{\bodyenvironmentcategory}}
+}
+\newcommand{\docenvironmentdetails}{
+	\bodyenvironmentdetails
+}
+
 % Commands to output citi banamex experience content.
 \newcommand{\doccitibanamexcorporation}{
 	\bold{\bodycitibanamexcorporation}
-	\separation{-2}
 	\hypericon{https://www.banamex.com}{faGlobe}
 }
 \newcommand{\doccitibanamexposition}{
 	\bodycitibanamexposition
 }
 \newcommand{\doccitibanamextechnology}{
-	\footnotemint{xml}{|\bodycitibanamextechnology|}
+	\bodycitibanamextechnology
 }
 \newcommand{\doccitibanamexoffice}{
 	\smallcerulean{\bodycitibanamexoffice}
@@ -211,14 +251,13 @@
 % Commands to output anzen soluciones experience content.
 \newcommand{\docanzensolucionescorporation}{
 	\bold{\bodyanzensolucionescorporation}
-	\separation{-2}
 	\hypericon{https://www.anzen.com.mx}{faGlobe}
 }
 \newcommand{\docanzensolucionesposition}{
 	\bodyanzensolucionesposition
 }
 \newcommand{\docanzensolucionestechnology}{
-	\footnotemint{xml}{|\bodyanzensolucionestechnology|}
+	\bodyanzensolucionestechnology
 }
 \newcommand{\docanzensolucionesoffice}{
 	\smallcerulean{\bodyanzensolucionesoffice}
@@ -232,7 +271,7 @@
 
 % Commands to output a professional cloud developer certificate.
 \newcommand{\docprofessionalclouddeveloperissuer}{
-	\bold{\bodyprofessionalclouddeveloperissuer}
+	\boxize{40}{\bold{\bodyprofessionalclouddeveloperissuer}}
 }
 \newcommand{\docprofessionalclouddevelopername}{
 	\includegraphics[width=3mm,height=3mm]{professionalclouddeveloper}
@@ -251,8 +290,7 @@
 
 % Commands to output an associate cloud engineer certificate.
 \newcommand{\docassociatecloudengineerissuer}{
-	\bold{\hidden{\bodyassociatecloudengineerissuer}}
-	\separation{-3.5}
+	\boxize{40}{\hidden{\bodyassociatecloudengineerissuer}}
 }
 \newcommand{\docassociatecloudengineername}{
 	\includegraphics[width=3mm,height=3mm]{associatecloudengineer}
@@ -271,8 +309,7 @@
 
 % Commands to output a scrum foundation professional certificate.
 \newcommand{\docscrumfoundationprofessionalissuer}{
-	\bold{\bodyscrumfoundationprofessionalissuer}
-	\separation{19.1}
+	\boxize{40}{\bold{\bodyscrumfoundationprofessionalissuer}}
 }
 \newcommand{\docscrumfoundationprofessionalname}{
 	\includegraphics[width=3mm,height=3mm]{scrumfoundationprofessional}
@@ -291,8 +328,7 @@
 
 % Commands to output a responsive web design certificate.
 \newcommand{\docresponsivewebdesignissuer}{
-	\bold{\bodyresponsivewebdesignissuer}
-	\separation{10.4}
+	\boxize{40}{\bold{\bodyresponsivewebdesignissuer}}
 }
 \newcommand{\docresponsivewebdesignname}{
 	\includegraphics[width=3mm,height=3mm]{responsivewebdesign}
@@ -313,12 +349,11 @@
 
 \newcommand{\doclatexresumetitle}{
 	\bold{\bodylatexresumetitle}
-	\separation{-2}
 	\hypericon{https://github.com/jesugq/resume/blob/master/resume.pdf}{faColumns}
 	\hypericon{https://github.com/jesugq/resume}{faGithub}
 }
 \newcommand{\doclatexresumelanguage}{
-	\footnotemint{xml}{|\bodylatexresumelanguage|}
+	\bodylatexresumelanguage
 }
 \newcommand{\doclatexresumedate}{
 	\smallcerulean{\bodylatexresumedate}
@@ -331,12 +366,11 @@
 % Command to output a google homepage project.
 \newcommand{\docgooglehomepagetitle}{
 	\bold{\bodygooglehomepagetitle}
-	\separation{-2}
 	\hypericon{https://jesugq.github.io/google-homepage}{faColumns}
 	\hypericon{https://github.com/jesugq/google-homepage}{faGithub}
 }
 \newcommand{\docgooglehomepagelanguage}{
-	\footnotemint{xml}{|\bodygooglehomepagelanguage|}
+	\bodygooglehomepagelanguage
 }
 \newcommand{\docgooglehomepagedate}{
 	\smallcerulean{\bodygooglehomepagedate}
@@ -346,14 +380,12 @@
 }
 
 % Commands to output a sudoku solver project.
-
 \newcommand{\docsudokusolvertitle}{
 	\bold{\bodysudokusolvertitle}
-	\separation{-2}
 	\hypericon{https://github.com/jesugq/sudoku/tree/master/sudoku-cli}{faGithub}
 }
 \newcommand{\docsudokusolverlanguage}{
-	\footnotemint{xml}{|\bodysudokusolverlanguage|}
+	\bodysudokusolverlanguage
 }
 \newcommand{\docsudokusolverdate}{
 	\smallcerulean{\bodysudokusolverdate}
@@ -365,11 +397,10 @@
 % Commands to output engineering education content.
 \newcommand{\docengineeringinstitute}{
 	\bold{\bodyengineeringinstitute}
-	\separation{-2}
 	\hypericon{https://certificados.tec.mx/certificate/dd14d13b16e750099a9783188f343e25}{faCheckCircle}
 }
 \newcommand{\docengineeringlanguage}{
-	\footnotemint{xml}{|\bodyengineeringlanguage|}
+	\bodyengineeringlanguage
 }
 \newcommand{\docengineeringlocation}{
 	\smallcerulean{\bodyengineeringlocation}
