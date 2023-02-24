@@ -125,9 +125,29 @@
 \newcommand{\doclisting}{
 	\spacing{-6}
 	\docshowcase
-		{\docprofessionalclouddeveloperimage}
-		{\docassociatecloudengineerimage}
-		{\docscrumfoundationprofessionalimage}
+		{\docprofessionalclouddeveloperimage{16}}
+		{\docassociatecloudengineerimage{16}}
+		{\docscrumfoundationprofessionalimage{16}}
+}
+
+% Command to output a cover letter.
+\newcommand{\docletter}{
+	{\large\bodycoverintroduction}
+	\spacing{8}
+	{\large\cerumize{\bodycoverlisting}}
+	\spacing{8}
+	{\large\bodycoverconclusion}
+}
+
+
+% Command to output a full width exhibition of certificates.
+\newcommand{\docexhibition}{
+	\hidden{\hrulefill}
+	\docprofessionalclouddeveloperimage{24}
+	\docassociatecloudengineerimage{24}
+	\docscrumfoundationprofessionalimage{24}
+	\docresponsivewebdesignimage{24}
+	\hidden{\hrulefill}
 }
 
 % Command to output a horizontal line with a title name.
@@ -282,10 +302,10 @@
 \newcommand{\docprofessionalclouddevelopertime}{
 	\smallcerulean{\bodyprofessionalclouddevelopertime}
 }
-\newcommand{\docprofessionalclouddeveloperimage}{
+\newcommand{\docprofessionalclouddeveloperimage}[1]{
 	\href
 		{https://www.credential.net/f05088e4-157e-40be-8d4f-b918be06f6c9}
-		{\includegraphics[width=16mm,height=16mm]{professionalclouddeveloper}}
+		{\includegraphics[width=#1mm,height=#1mm]{professionalclouddeveloper}}
 }
 
 % Commands to output an associate cloud engineer certificate.
@@ -301,10 +321,10 @@
 \newcommand{\docassociatecloudengineertime}{
 	\smallcerulean{\bodyassociatecloudengineertime}
 }
-\newcommand{\docassociatecloudengineerimage}{
+\newcommand{\docassociatecloudengineerimage}[1]{
 	\href
 		{https://www.credential.net/59c21655-2c0d-4803-ba06-3bad73fa3b69}
-		{\includegraphics[width=16mm,height=16mm]{associatecloudengineer}}
+		{\includegraphics[width=#1mm,height=#1mm]{associatecloudengineer}}
 }
 
 % Commands to output a scrum foundation professional certificate.
@@ -320,10 +340,10 @@
 \newcommand{\docscrumfoundationprofessionaltime}{
 	\smallcerulean{\bodyscrumfoundationprofessionaltime}
 }
-\newcommand{\docscrumfoundationprofessionalimage}{
+\newcommand{\docscrumfoundationprofessionalimage}[1]{
 	\href
 		{https://www.credly.com/badges/769ad27d-6a5c-4c5a-9086-a423050de058/public_url}
-		{\includegraphics[width=16mm,height=16mm]{scrumfoundationprofessional}}	
+		{\includegraphics[width=#1mm,height=#1mm]{scrumfoundationprofessional}}	
 }
 
 % Commands to output a responsive web design certificate.
@@ -339,10 +359,10 @@
 \newcommand{\docresponsivewebdesigntime}{
 	\smallcerulean{\bodyresponsivewebdesigntime}
 }
-\newcommand{\docresponsivewebdesignimage}{
+\newcommand{\docresponsivewebdesignimage}[1]{
 	\href
 		{https://www.freecodecamp.org/certification/jesugq/responsive-web-design}
-		{\includegraphics[width=16mm,height=16mm]{responsivewebdesign}}
+		{\includegraphics[width=#1mm,height=#1mm]{responsivewebdesign}}
 }
 
 % Command to output a latex resume project.

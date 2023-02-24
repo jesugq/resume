@@ -46,6 +46,8 @@
 
 \usepackage{moresize} % Provides more font size commands (\HUGE and \small)
 
+\usepackage{changepage} % Provides the adjuswidth environment
+
 %----------------------------------------------------------------------------------------
 %	PAGE LAYOUT
 %----------------------------------------------------------------------------------------
@@ -212,6 +214,13 @@
 	\begin{longtable}[H]{c c c}
 }{
 	\end{longtable}
+}
+
+% Environment to hold a single box of content.
+\newenvironment{entrytext}{
+	\begin{adjustwidth}{1.5cm}{1.5cm}
+}{
+	\end{adjustwidth}
 }
 
 %\newcommand{\entry}[4]{% First argument for the leftmost date(s) text, second is for the bold entry heading, third is for the bold right-aligned entry qualifier and the fourth is for the entry description
