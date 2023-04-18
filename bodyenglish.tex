@@ -98,6 +98,7 @@
 	\item Reduced multiple microservice's sign-off time to as low as 6 minutes by automating the bank's log-in, session keep alive and business case evaluations. % Fastest validation for three simultaneously deployed microservices was 6 minutes.
 	\item Sped up the creation of evidence files by 240\% on a low-end virtual machine by opening the template with a text editor and manually inserting fields and table contents in bulk. % From 10 manually opened files every 10 mins to 24 source edited files every 10 mins.
 	\item Learned to inspect and directly modify SoapUI xml source files to greatly increase the creation of future test suites. % SoapUI is primarily handled through its user interface, making for an unoptimized test suite creation process.
+	\item Solved an error in SoapUI's configuration which forced users to load all projects, one by one, upon closing the app. % SoapUI uses a workspace file to keep track of currently opened projects, and the default user configuration file pointed towards a corrupted version of the workspace file.
 }
 
 \newcommand{\bodyanzensolucionescorporation}{
