@@ -2,14 +2,17 @@
 %	TEXLIVE HELPERS
 %----------------------------------------------------------------------------------------
 
-% Command to output a non-intended hyperlink in the form of a cerulean colored font awesome icon.
+% Command to output the preferred accent color.
+\newcommand{\accentcolor}{cadetblue}
+
+% Command to output a non-intended hyperlink in the form of an accent colored font awesome icon.
 \newcommand{\hypericon}[2]{
-	\href{#1}{\textcolor{cerulean}{\makebox[2mm]{\csname #2\endcsname}}}
+	\href{#1}{\textcolor{\accentcolor}{\makebox[2mm]{\csname #2\endcsname}}}
 }
 
 % Command to output a small box containing a font awesome icon.
 \newcommand{\favicon}[1]{
-	\cerulean{\makebox(8, 8){\csname#1\endcsname}}
+	\textcolor{\accentcolor}{\makebox(8, 8){\csname#1\endcsname}}
 }
 
 % Command to output non-intented huge bolded content.
@@ -17,19 +20,19 @@
 	\hspace{-3.5mm}{\HUGE\textbf{#1}}
 }
 
-% Command to output centered strong cerulean content.
-\newcommand{\strongcerulean}[1]{
-	\textcolor{cerulean}{\textbf{#1}}
+% Command to output centered strong accent colored content.
+\newcommand{\strongaccent}[1]{
+	\textcolor{\accentcolor}{\textbf{#1}}
 }
 
-% Command to output large cerulean colored content.
-\newcommand{\largecerulean}[1]{
-	{\Large\textcolor{cerulean}{#1}}
+% Command to output large accent colored content.
+\newcommand{\largeaccent}[1]{
+	{\Large\textcolor{\accentcolor}{#1}}
 }
 
-% Command to output small cerulean colored content.
-\newcommand{\smallcerulean}[1]{
-	{\small\textcolor{cerulean}{#1}}
+% Command to output small accent colored content.
+\newcommand{\smallaccent}[1]{
+	{\small\textcolor{\accentcolor}{#1}}
 }
 
 % Command to output footnote minted content.
@@ -47,11 +50,12 @@
 	\hspace{-1.5mm}\textit{#1}
 }
 
-% Command to output cerulean colored content.
-\newcommand{\cerulean}[1]{
-	\textcolor{cerulean}{#1}
+% Command to output accent-colored content.
+\newcommand{\colored}[1]{
+	\textcolor{\accentcolor}{#1}
 }
 
+% Command to output white-colored content.
 \newcommand{\hidden}[1]{
 	\textcolor{white}{#1}
 }
@@ -66,11 +70,11 @@
 	\hspace{#1mm}
 }
 
-% Command to output cerulean colored lists.
-\newcommand{\cerumize}[1]{
+% Command to output accent colored lists.
+\newcommand{\accentize}[1]{
 	\vspace{-2mm}
 	\renewcommand*\do[1]{\item ##1}
-	\begin{itemize}[label=\textcolor{cerulean}{\textbullet}]
+	\begin{itemize}[label=\textcolor{\accentcolor}{\textbullet}]
 		\setlength{\parskip}{0mm}
 		#1
 	\end{itemize}
@@ -102,7 +106,7 @@
 	\spacing{2}
 	
 	\separation{-4}
-	\largecerulean{\bodydiploma}
+	\largeaccent{\bodydiploma}
 }
 
 % Command to output a vertical row of contact information.
@@ -125,16 +129,17 @@
 \newcommand{\doclisting}{
 	\spacing{-6}
 	\docshowcase
+		{}
 		{\docprofessionalclouddeveloperimage{16}}
 		{\docassociatecloudengineerimage{16}}
-		{\docscrumfoundationprofessionalimage{16}}
+		% {\docscrumfoundationprofessionalimage{16}}
 }
 
 % Command to output a cover letter.
 \newcommand{\docletter}{
 	{\large\bodycoverintroduction}
 	\spacing{8}
-	{\large\cerumize{\bodycoverlisting}}
+	{\large\accentize{\bodycoverlisting}}
 	\spacing{8}
 	{\large\bodycoverconclusion}
 }
@@ -152,11 +157,11 @@
 
 % Command to output a horizontal line with a title name.
 \newcommand{\docsection}[1]{
-	\cerulean{\hrulefill}
+	\colored{\hrulefill}
 	\hidden{q}
-	\cerulean{#1}
+	\colored{#1}
 	\hidden{p}
-	\cerulean{\hrulefill}
+	\colored{\hrulefill}
 	\spacing{2}
 }
 
@@ -259,13 +264,13 @@
 	\bodycitibanamextechnology
 }
 \newcommand{\doccitibanamexoffice}{
-	\smallcerulean{\bodycitibanamexoffice}
+	\smallaccent{\bodycitibanamexoffice}
 }
 \newcommand{\doccitibanamexperiod}{
-	\smallcerulean{\bodycitibanamexperiod}
+	\smallaccent{\bodycitibanamexperiod}
 }
 \newcommand{\doccitibanamexdetails}{
-	\cerumize{\bodycitibanamexdetails}
+	\accentize{\bodycitibanamexdetails}
 }
 
 % Commands to output anzen soluciones experience content.
@@ -280,13 +285,13 @@
 	\bodyanzendigitaltechnology
 }
 \newcommand{\docanzendigitaloffice}{
-	\smallcerulean{\bodyanzendigitaloffice}
+	\smallaccent{\bodyanzendigitaloffice}
 }
 \newcommand{\docanzendigitalperiod}{
-	\smallcerulean{\bodyanzendigitalperiod}
+	\smallaccent{\bodyanzendigitalperiod}
 }
 \newcommand{\docanzendigitaldetails}{
-	\cerumize{\bodyanzendigitaldetails}
+	\accentize{\bodyanzendigitaldetails}
 }
 
 % Commands to output a professional cloud developer certificate.
@@ -300,7 +305,7 @@
 	\bodyprofessionalclouddevelopername
 }
 \newcommand{\docprofessionalclouddevelopertime}{
-	\smallcerulean{\bodyprofessionalclouddevelopertime}
+	\smallaccent{\bodyprofessionalclouddevelopertime}
 }
 \newcommand{\docprofessionalclouddeveloperimage}[1]{
 	\href
@@ -319,7 +324,7 @@
 	\bodyassociatecloudengineername
 }
 \newcommand{\docassociatecloudengineertime}{
-	\smallcerulean{\bodyassociatecloudengineertime}
+	\smallaccent{\bodyassociatecloudengineertime}
 }
 \newcommand{\docassociatecloudengineerimage}[1]{
 	\href
@@ -338,7 +343,7 @@
 	\bodyscrumfoundationprofessionalname
 }
 \newcommand{\docscrumfoundationprofessionaltime}{
-	\smallcerulean{\bodyscrumfoundationprofessionaltime}
+	\smallaccent{\bodyscrumfoundationprofessionaltime}
 }
 \newcommand{\docscrumfoundationprofessionalimage}[1]{
 	\href
@@ -357,7 +362,7 @@
 	\bodyresponsivewebdesignname
 }
 \newcommand{\docresponsivewebdesigntime}{
-	\smallcerulean{\bodyresponsivewebdesigntime}
+	\smallaccent{\bodyresponsivewebdesigntime}
 }
 \newcommand{\docresponsivewebdesignimage}[1]{
 	\href
@@ -376,10 +381,10 @@
 	\bodylatexresumelanguage
 }
 \newcommand{\doclatexresumedate}{
-	\smallcerulean{\bodylatexresumedate}
+	\smallaccent{\bodylatexresumedate}
 }
 \newcommand{\doclatexresumedetails}{
-	\cerumize{\bodylatexresumedetails}
+	\accentize{\bodylatexresumedetails}
 }
 
 
@@ -393,10 +398,10 @@
 	\bodygooglehomepagelanguage
 }
 \newcommand{\docgooglehomepagedate}{
-	\smallcerulean{\bodygooglehomepagedate}
+	\smallaccent{\bodygooglehomepagedate}
 }
 \newcommand{\docgooglehomepagedetails}{
-	\cerumize{\bodygooglehomepagedetails}
+	\accentize{\bodygooglehomepagedetails}
 }
 
 % Commands to output a sudoku solver project.
@@ -408,10 +413,10 @@
 	\bodysudokusolverlanguage
 }
 \newcommand{\docsudokusolverdate}{
-	\smallcerulean{\bodysudokusolverdate}
+	\smallaccent{\bodysudokusolverdate}
 }
 \newcommand{\docsudokusolverdetails}{
-	\cerumize{\bodysudokusolverdetails}
+	\accentize{\bodysudokusolverdetails}
 }
 
 % Commands to output engineering education content.
@@ -423,10 +428,10 @@
 	\bodyengineeringlanguage
 }
 \newcommand{\docengineeringlocation}{
-	\smallcerulean{\bodyengineeringlocation}
+	\smallaccent{\bodyengineeringlocation}
 }
 \newcommand{\docengineeringdate}{
-	\smallcerulean{\bodyengineeringdate}
+	\smallaccent{\bodyengineeringdate}
 }
 \newcommand{\docengineeringdetails}{
 	\bodyengineeringdetails

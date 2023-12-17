@@ -87,6 +87,7 @@
 \usepackage{xcolor}
 
 \definecolor{cerulean}{RGB}{4,146,194} % Create the commonly used cerulean text color
+\definecolor{cadetblue}{RGB}{116,114,154} % Create the commonly used cadetblue text color
 
 \usepackage{minted} % Provides inline code functionality
 
