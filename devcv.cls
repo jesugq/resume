@@ -56,10 +56,10 @@
 
 \geometry{
 	paper=a4paper, % Paper size, change to letterpaper for US letter size
-	top=1.5cm, % Top margin
-	bottom=1.5cm, % Bottom margin
-	left=1.5cm, % Left margin
-	right=1.5cm, % Right margin
+	top=1cm, % Top margin
+	bottom=1cm, % Bottom margin
+	left=1cm, % Left margin
+	right=1cm, % Right margin
 	headheight=0cm, % Header height
 	footskip=0cm, % Space from the bottom margin to the baseline of the footer
 	headsep=0.0cm, % Space from the top margin to the baseline of the header
@@ -87,7 +87,7 @@
 \usepackage{xcolor}
 
 \definecolor{cerulean}{RGB}{4,146,194} % Create the commonly used cerulean text color
-\definecolor{cadetblue}{RGB}{116,114,154} % Create the commonly used cadetblue text color
+\definecolor{cadetblue}{RGB}{116,114,154} % Create the commonly used cadetblue text colorf
 
 \usepackage{minted} % Provides inline code functionality
 
