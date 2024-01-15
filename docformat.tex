@@ -118,7 +118,7 @@
 % Command to output a vertical row of contact information.
 \newcommand{\doccontact}{
 	\spacing{-6.5}
-	\hypericon{https://goo.gl/maps/huNs7LUryooCMQML8}{faMapMarker}
+	\hypericon{https://maps.app.goo.gl/U12Lxq6ALWDSuLdV9}{faMapMarker}
 	\regular{\bodylocation}
 	
 	\hypericon{tel:522222650774}{faPhone}
@@ -196,14 +196,6 @@
 	}
 }
 
-% Command to output a certificate entry.
-\newcommand{\doccertificate}[3]{
-	\spacing{1}
-	\parbox[t]{\columnwidth}{
-		#1#2\hfill#3\separation{-5.5}
-	}
-}
-
 % Command to output an education entry.
 \newcommand{\doceducation}[5]{
 	\spacing{1}
@@ -212,6 +204,14 @@
 		#1\hfill#3\separation{-4.5}
 		
 		#5#2\hfill#4\separation{-4.5}
+	}
+}
+
+% Command to output a certificate entry.
+\newcommand{\doccertificate}[3]{
+	\spacing{1}
+	\parbox[t]{\columnwidth}{
+		#1#2\hfill#3\separation{-5.5}
 	}
 }
 
@@ -262,7 +262,7 @@
 % Commands to output anzen soluciones experience content.
 \newcommand{\docanzendigitalcorporation}{
 	\bold{\bodyanzendigitalcorporation}
-	\hypericon{https://www.anzen.com.mx}{faGlobe}
+	\hypericon{https://mx.linkedin.com/company/anzendigital}{faGlobe}
 }
 \newcommand{\docanzendigitalposition}{
 	\regular{\bodyanzendigitalposition}
@@ -280,30 +280,50 @@
 	\accentize{\bodyanzendigitaldetails}
 }
 
+
+% Commands to output app brewery education content.
+\newcommand{\docwebdevelopmentinstitute}{
+	\bold{\bodywebdevelopmentinstitute}
+	\hypericon{https://udemy.com/course/the-complete-web-development-bootcamp/}{faGlobe}
+}
+\newcommand{\docwebdevelopmentlanguage}{
+	\colored{\bodyappbrewerylanguage}
+}
+\newcommand{\docwebdevelopmentdate}{
+	\italic{\bodywebdevelopmentdate}
+}
+\newcommand{\docwebdevelopmentlocation}{
+	\italic{\bodywebdevelopmentlocation}
+}
+\newcommand{\docwebdevelopmentdetails}{
+	\regular{\bodywebdevelopmentdetails}
+}
+
 % Commands to output engineering education content.
 \newcommand{\docengineeringinstitute}{
 	\bold{\bodyengineeringinstitute}
+	\hypericon{https://tec.mx/}{faGlobe}
 	\hypericon{https://certificados.tec.mx/certificate/dd14d13b16e750099a9783188f343e25}{faCheckCircle}
 }
 \newcommand{\docengineeringlanguage}{
 	\colored{\bodyengineeringlanguage}
 }
-\newcommand{\docengineeringlocation}{
-	\italic{\bodyengineeringlocation}
-}
 \newcommand{\docengineeringdate}{
 	\italic{\bodyengineeringdate}
+}
+\newcommand{\docengineeringlocation}{
+	\italic{\bodyengineeringlocation}
 }
 \newcommand{\docengineeringdetails}{
 	\regular{\bodyengineeringdetails}
 }
+
 
 % Commands to output a professional cloud developer certificate.
 \newcommand{\docprofessionalclouddeveloperissuer}{
 	\boxize{40}{\bold{\bodyprofessionalclouddeveloperissuer}}
 }
 \newcommand{\docprofessionalclouddevelopername}{
-	\includegraphics[width=3mm,height=3mm]{professionalclouddeveloper}
 	\hypericon{https://www.credential.net/f05088e4-157e-40be-8d4f-b918be06f6c9}{faExternalLink}
 	\separation{0}
 	\regular{\bodyprofessionalclouddevelopername}
@@ -322,7 +342,6 @@
 	\boxize{40}{\hidden{\bodyassociatecloudengineerissuer}}
 }
 \newcommand{\docassociatecloudengineername}{
-	\includegraphics[width=3mm,height=3mm]{associatecloudengineer}
 	\hypericon{https://www.credential.net/59c21655-2c0d-4803-ba06-3bad73fa3b69}{faExternalLink}
 	\separation{0}
 	\regular{\bodyassociatecloudengineername}
@@ -341,7 +360,6 @@
 	\boxize{40}{\bold{\bodyscrumfoundationprofessionalissuer}}
 }
 \newcommand{\docscrumfoundationprofessionalname}{
-	\includegraphics[width=3mm,height=3mm]{scrumfoundationprofessional}
 	\hypericon{https://www.credly.com/badges/769ad27d-6a5c-4c5a-9086-a423050de058/public_url}{faExternalLink}
 	\separation{0}
 	\regular{\bodyscrumfoundationprofessionalname}
@@ -360,7 +378,6 @@
 	\boxize{40}{\bold{\bodyresponsivewebdesignissuer}}
 }
 \newcommand{\docresponsivewebdesignname}{
-	\includegraphics[width=3mm,height=3mm]{responsivewebdesign}
 	\hypericon{https://www.freecodecamp.org/certification/jesugq/responsive-web-design}{faExternalLink}
 	\separation{0}
 	\regular{\bodyresponsivewebdesignname}
@@ -377,8 +394,7 @@
 % Command to output a latex resume project.
 \newcommand{\doclatexresumetitle}{
 	\bold{\bodylatexresumetitle}
-	\hypericon{https://github.com/jesugq/resume/blob/master/resumeenglish.pdf}{faColumns}
-	\hypericon{https://github.com/jesugq/resume/blob/master/resumespanish.pdf}{faColumns}
+	\hypericon{https://github.com/jesugq/resume/blob/master/resume.pdf}{faExternalLink}
 	\hypericon{https://github.com/jesugq/resume}{faGithub}
 }
 \newcommand{\doclatexresumelanguage}{
@@ -395,7 +411,7 @@
 % Command to output a google homepage project.
 \newcommand{\docgooglehomepagetitle}{
 	\bold{\bodygooglehomepagetitle}
-	\hypericon{https://jesugq.github.io/google-homepage}{faColumns}
+	\hypericon{https://jesugq.github.io/google-homepage}{faExternalLink}
 	\hypericon{https://github.com/jesugq/google-homepage}{faGithub}
 }
 \newcommand{\docgooglehomepagelanguage}{

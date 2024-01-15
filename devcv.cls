@@ -70,8 +70,9 @@
 %	FONTS
 %----------------------------------------------------------------------------------------
 
-\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[utf8x]{inputenc} % Output international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage[euler]{textgreek}
 
 %\usepackage[default]{raleway}
 %\usepackage[defaultsans]{droidsans}
@@ -87,7 +88,7 @@
 \usepackage{xcolor}
 
 \definecolor{cerulean}{RGB}{4,146,194} % Create the commonly used cerulean text color
-\definecolor{cadetblue}{RGB}{116,114,154} % Create the commonly used cadetblue text colorf
+\definecolor{cadetblue}{RGB}{116,114,154} % Create the commonly used cadetblue text color
 
 \usepackage{minted} % Provides inline code functionality
 
