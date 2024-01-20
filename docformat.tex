@@ -124,11 +124,11 @@
 	\hypericon{tel:522222650774}{faPhone}
 	\regular{\bodyworkphone}
 	
+	\hypericon{mailto:jesugq@proton.me}{faEnvelope}
+	\regular{\bodyworkmail}
+	
 	\hypericon{https://github.com/jesugq}{faGithub}
 	\regular{\bodyusername}
-	
-	\hypericon{mailto:jesugq@gmail.com}{faEnvelope}
-	\regular{\bodyworkmail}
 }
 
 % Command to output a vertical row of listing information.
@@ -208,21 +208,21 @@
 }
 
 % Command to output a certificate entry.
-\newcommand{\doccertificate}[3]{
+\newcommand{\doccertificate}[2]{
 	\spacing{1}
 	\parbox[t]{\columnwidth}{
-		#1#2\hfill#3\separation{-5.5}
+		#1#2\hfill
 	}
 }
 
 % Command to output a project entry,
-\newcommand{\docproject}[4]{
+\newcommand{\docproject}[3]{
 	\spacing{1}
 	\separation{-0.825}
 	\parbox[t]{\columnwidth}{
-		#1#2\hfill#3\separation{-5}
+		#1#2\hfill
 		
-		#4
+		#3
 	}
 }
 
@@ -285,9 +285,10 @@
 \newcommand{\docwebdevelopmentinstitute}{
 	\bold{\bodywebdevelopmentinstitute}
 	\hypericon{https://udemy.com/course/the-complete-web-development-bootcamp/}{faGlobe}
+	\hypericon{https://github.com/jesugq/app-brewery}{faGithub}
 }
 \newcommand{\docwebdevelopmentlanguage}{
-	\colored{\bodyappbrewerylanguage}
+	\colored{\bodywebdevelopmentlanguage}
 }
 \newcommand{\docwebdevelopmentdate}{
 	\italic{\bodywebdevelopmentdate}
@@ -297,6 +298,25 @@
 }
 \newcommand{\docwebdevelopmentdetails}{
 	\regular{\bodywebdevelopmentdetails}
+}
+
+% Commands to output freecodecamp education content.
+\newcommand{\docresponsivedevelopmentinstitute}{
+	\bold{\bodyresponsivedevelopmentinstitute}
+	\hypericon{https://udemy.com/course/the-complete-web-development-bootcamp/}{faGlobe}
+	\hypericon{https://github.com/jesugq/app-brewery}{faGithub}
+}
+\newcommand{\docresponsivedevelopmentlanguage}{
+	\colored{\bodyresponsivedevelopmentlanguage}
+}
+\newcommand{\docresponsivedevelopmentdate}{
+	\italic{\bodyresponsivedevelopmentdate}
+}
+\newcommand{\docresponsivedevelopmentlocation}{
+	\italic{\bodyresponsivedevelopmentlocation}
+}
+\newcommand{\docresponsivedevelopmentdetails}{
+	\regular{\bodyresponsivedevelopmentdetails}
 }
 
 % Commands to output engineering education content.
@@ -328,9 +348,6 @@
 	\separation{0}
 	\regular{\bodyprofessionalclouddevelopername}
 }
-\newcommand{\docprofessionalclouddevelopertime}{
-	\italic{\bodyprofessionalclouddevelopertime}
-}
 \newcommand{\docprofessionalclouddeveloperimage}[1]{
 	\href
 		{https://www.credential.net/f05088e4-157e-40be-8d4f-b918be06f6c9}
@@ -345,9 +362,6 @@
 	\hypericon{https://www.credential.net/59c21655-2c0d-4803-ba06-3bad73fa3b69}{faExternalLink}
 	\separation{0}
 	\regular{\bodyassociatecloudengineername}
-}
-\newcommand{\docassociatecloudengineertime}{
-	\italic{\bodyassociatecloudengineertime}
 }
 \newcommand{\docassociatecloudengineerimage}[1]{
 	\href
@@ -364,9 +378,6 @@
 	\separation{0}
 	\regular{\bodyscrumfoundationprofessionalname}
 }
-\newcommand{\docscrumfoundationprofessionaltime}{
-	\italic{\bodyscrumfoundationprofessionaltime}
-}
 \newcommand{\docscrumfoundationprofessionalimage}[1]{
 	\href
 		{https://www.credly.com/badges/769ad27d-6a5c-4c5a-9086-a423050de058/public_url}
@@ -382,13 +393,22 @@
 	\separation{0}
 	\regular{\bodyresponsivewebdesignname}
 }
-\newcommand{\docresponsivewebdesigntime}{
-	\italic{\bodyresponsivewebdesigntime}
-}
 \newcommand{\docresponsivewebdesignimage}[1]{
 	\href
 		{https://www.freecodecamp.org/certification/jesugq/responsive-web-design}
 		{\includegraphics[width=#1mm,height=#1mm]{responsivewebdesign}}
+}
+
+% Command to output an algorithms project.
+\newcommand{\docalgorithmstitle}{
+	\bold{\bodyalgorithmstitle}
+	\hypericon{https://github.com/jesugq/algorithms}{faGithub}
+}
+\newcommand{\docalgorithmslanguage}{
+	\colored{\bodyalgorithmslanguage}
+}
+\newcommand{\docalgorithmsdetails}{
+	\accentize{\bodyalgorithmsdetails}
 }
 
 % Command to output a latex resume project.
@@ -399,9 +419,6 @@
 }
 \newcommand{\doclatexresumelanguage}{
 	\colored{\bodylatexresumelanguage}
-}
-\newcommand{\doclatexresumedate}{
-	\italic{\bodylatexresumedate}
 }
 \newcommand{\doclatexresumedetails}{
 	\accentize{\bodylatexresumedetails}
@@ -417,9 +434,6 @@
 \newcommand{\docgooglehomepagelanguage}{
 	\colored{\bodygooglehomepagelanguage}
 }
-\newcommand{\docgooglehomepagedate}{
-	\italic{\bodygooglehomepagedate}
-}
 \newcommand{\docgooglehomepagedetails}{
 	\accentize{\bodygooglehomepagedetails}
 }
@@ -431,9 +445,6 @@
 }
 \newcommand{\docsudokusolverlanguage}{
 	\colored{\bodysudokusolverlanguage}
-}
-\newcommand{\docsudokusolverdate}{
-	\italic{\bodysudokusolverdate}
 }
 \newcommand{\docsudokusolverdetails}{
 	\accentize{\bodysudokusolverdetails}
