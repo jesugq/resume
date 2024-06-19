@@ -211,6 +211,14 @@
 	\end{longtable}
 }
 
+% Environment to hold a new list of rows
+\newenvironment{entryrow}{
+	\begin{longtable}[H]{l}
+	}{
+	\end{longtable}
+	\spacing{2}
+}
+
 % Environment to hold three columns of entries
 \newenvironment{entrytable}{
 	\begin{longtable}[H]{c c c}

@@ -18,12 +18,12 @@
 % Command to output non-intented huge bolded content.
 \newcommand{\hugebold}[1]{
 	\hspace{-2.5mm}
-	{\HUGE\textbf{\textcolor{white}{|}#1}}
+	{\huge\textbf{\textcolor{white}{|}#1}}
 }
 
 % Command to output large accent colored content.
 \newcommand{\largeregular}[1]{
-	{\Large\textcolor{\accentcolor}{\textcolor{white}{|}#1}}
+	{\large\textcolor{\accentcolor}{\textcolor{white}{|}#1}}
 }
 
 % Command to output footnote minted content.
@@ -96,48 +96,39 @@
 %	TEXLIVE COMMANDS
 %----------------------------------------------------------------------------------------
 
-% Command to output a header with three elements, a large short name, personal information, and contact information.
-\newcommand{\docperson}[3]{
-	\parbox[t]{0.50\columnwidth}{#1}
-	\parbox[t]{0.50\columnwidth}{
-		\parbox[t]{0.20\columnwidth}{#2}
-		\parbox[t]{0.30\columnwidth}{#3}
-	}
+% Command to output a centered header with a full name and contact information.
+\newcommand{\docperson}[2]{
+	\parbox[t]{0.90\columnwidth}{#1}
+	%\parbox[t]{0.10\columnwidth}{#2}
 }
 
-% Command to output a large, cerulean name.
-\newcommand{\doclargename}{
-	\separation{-3.5}
-	\hugebold{\bodyrealname}
-	\spacing{2}
-	
-	\separation{-3.5}
-	\largeregular{\bodydiploma}
-}
-
-% Command to output a vertical row of contact information.
+% Command to output a large full name and contact information. 
 \newcommand{\doccontact}{
 	\spacing{-6.5}
-	\hypericon{https://maps.app.goo.gl/U12Lxq6ALWDSuLdV9}{faMapMarker}
-	\regular{\bodylocation}
 	
-	\hypericon{tel:522222650774}{faPhone}
-	\regular{\bodyworkphone}
+	\begin{center}
+	\hugebold{\bodyrealname}
+	\end{center}
 	
-	\hypericon{mailto:jesugq@proton.me}{faEnvelope}
-	\regular{\bodyworkmail}
+	\spacing{-6.5}
 	
-	\hypericon{https://github.com/jesugq}{faGithub}
-	\regular{\bodyusername}
+	\begin{center}
+		\hypericon{https://maps.app.goo.gl/U12Lxq6ALWDSuLdV9}{faMapMarker}\regular{\bodylocation}
+		\hypericon{tel:522222650774}{faPhone}\regular{\bodyworkphone}
+		\hypericon{mailto:jesugq@proton.me}{faEnvelope}\regular{\bodyworkmail}
+		\hypericon{https://www.linkedin.com/in/jesugq}{faLinkedinSquare}\regular{\bodyusername}
+		\hypericon{https://github.com/jesugq}{faGithub}\regular{\bodyusername}
+	\end{center}
+	
+	\spacing{-2.5}
 }
 
 % Command to output a vertical row of listing information.
 \newcommand{\doclisting}{
-	\spacing{-6}
+	\spacing{-6.5}
 	\docshowcase
-		{}
 		{\docprofessionalclouddeveloperimage{16}}
-		{\docassociatecloudengineerimage{16}}
+		%{\docassociatecloudengineerimage{16}}
 		% {\docscrumfoundationprofessionalimage{16}}
 }
 
@@ -164,23 +155,20 @@
 % Command to output a horizontal line with a title name.
 \newcommand{\docsection}[1]{
 	\spacing{1}
-	
 	\separation{-1.75}
 	\coloredbold{#1}
-	\spacing{-2.5}
 	
+	\spacing{-2.5}
 	\colored{\hrulefill}
-	\separation{-6}
+	\separation{-3.5}
 	
 	\spacing{1}
 }
 
 % Command to output a horizontally centered block of elements.
-\newcommand{\docshowcase}[3]{
+\newcommand{\docshowcase}[1]{
 	\hfill
 	\parbox[t]{16mm}{#1}
-	\parbox[t]{16mm}{#2}
-	\parbox[t]{16mm}{#3}
 }
 
 % Command to output an experience entry.
@@ -188,9 +176,9 @@
 	\spacing{1}
 	\separation{-0.825}
 	\parbox[t]{\columnwidth}{
-		#1\hfill#4\separation{-4.5}
+		#1\hfill#4\separation{-2}
 		
-		#2#3\hfill#5\separation{-4.5}
+		#2#3\hfill#5\separation{-2}
 		
 		#6
 	}
@@ -201,9 +189,9 @@
 	\spacing{1}
 	\separation{-0.825}
 	\parbox[t]{\columnwidth}{
-		#1\hfill#3\separation{-4.5}
+		#1\hfill#3\separation{-2}
 		
-		#5#2\hfill#4\separation{-4.5}
+		#5#2\hfill#4\separation{-2}
 	}
 }
 
