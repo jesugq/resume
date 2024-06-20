@@ -117,7 +117,6 @@
 		\hypericon{tel:522222650774}{faPhone}\regular{\bodyworkphone}
 		\hypericon{mailto:jesugq@proton.me}{faEnvelope}\regular{\bodyworkmail}
 		\hypericon{https://www.linkedin.com/in/jesugq}{faLinkedinSquare}\regular{\bodyusername}
-		\hypericon{https://github.com/jesugq}{faGithub}\regular{\bodyusername}
 	\end{center}
 	
 	\spacing{-2.5}
@@ -176,9 +175,9 @@
 	\spacing{1}
 	\separation{-0.825}
 	\parbox[t]{\columnwidth}{
-		#1\hfill#4\separation{-2}
+		#1\hfill#4
 		
-		#2#3\hfill#5\separation{-2}
+		#2#3\hfill#5
 		
 		#6
 	}
@@ -189,9 +188,17 @@
 	\spacing{1}
 	\separation{-0.825}
 	\parbox[t]{\columnwidth}{
-		#1\hfill#3\separation{-2}
+		#1\hfill#4
 		
-		#5#2\hfill#4\separation{-2}
+		#2#3\hfill#5
+	}
+}
+
+% Command to output an activity entry.
+\newcommand{\docactivity}[4]{
+	\spacing{1}
+	\parbox[t]{\columnwidth}{
+		#1#2#3\hfill#4\separation{-3}
 	}
 }
 
@@ -227,8 +234,8 @@
 %----------------------------------------------------------------------------------------
 
 % Commands to output citi banamex experience content.
-\newcommand{\doccitibanamexcorporation}{
-	\bold{\bodycitibanamexcorporation}
+\newcommand{\doccitibanamexorganization}{
+	\bold{\bodycitibanamexorganization}
 	\hypericon{https://www.banamex.com}{faGlobe}
 }
 \newcommand{\doccitibanamexposition}{
@@ -237,8 +244,8 @@
 \newcommand{\doccitibanamextechnology}{
 	\colored{\bodycitibanamextechnology}
 }
-\newcommand{\doccitibanamexoffice}{
-	\italic{\bodycitibanamexoffice}
+\newcommand{\doccitibanamexlocation}{
+	\italic{\bodycitibanamexlocation}
 }
 \newcommand{\doccitibanamexperiod}{
 	\italic{\bodycitibanamexperiod}
@@ -248,8 +255,8 @@
 }
 
 % Commands to output anzen soluciones experience content.
-\newcommand{\docanzendigitalcorporation}{
-	\bold{\bodyanzendigitalcorporation}
+\newcommand{\docanzendigitalorganization}{
+	\bold{\bodyanzendigitalorganization}
 	\hypericon{https://mx.linkedin.com/company/anzendigital}{faGlobe}
 }
 \newcommand{\docanzendigitalposition}{
@@ -258,8 +265,8 @@
 \newcommand{\docanzendigitaltechnology}{
 	\colored{\bodyanzendigitaltechnology}
 }
-\newcommand{\docanzendigitaloffice}{
-	\italic{\bodyanzendigitaloffice}
+\newcommand{\docanzendigitallocation}{
+	\italic{\bodyanzendigitallocation}
 }
 \newcommand{\docanzendigitalperiod}{
 	\italic{\bodyanzendigitalperiod}
@@ -269,131 +276,104 @@
 }
 
 
-% Commands to output app brewery education content.
-\newcommand{\docwebdevelopmentinstitute}{
-	\bold{\bodywebdevelopmentinstitute}
-	\hypericon{https://udemy.com/course/the-complete-web-development-bootcamp/}{faGlobe}
-	\hypericon{https://github.com/jesugq/app-brewery}{faGithub}
-}
-\newcommand{\docwebdevelopmentlanguage}{
-	\colored{\bodywebdevelopmentlanguage}
-}
-\newcommand{\docwebdevelopmentdate}{
-	\italic{\bodywebdevelopmentdate}
-}
-\newcommand{\docwebdevelopmentlocation}{
-	\italic{\bodywebdevelopmentlocation}
-}
-\newcommand{\docwebdevelopmentdetails}{
-	\regular{\bodywebdevelopmentdetails}
-}
-
-% Commands to output freecodecamp education content.
-\newcommand{\docresponsivedevelopmentinstitute}{
-	\bold{\bodyresponsivedevelopmentinstitute}
-	\hypericon{https://udemy.com/course/the-complete-web-development-bootcamp/}{faGlobe}
-	\hypericon{https://github.com/jesugq/app-brewery}{faGithub}
-}
-\newcommand{\docresponsivedevelopmentlanguage}{
-	\colored{\bodyresponsivedevelopmentlanguage}
-}
-\newcommand{\docresponsivedevelopmentdate}{
-	\italic{\bodyresponsivedevelopmentdate}
-}
-\newcommand{\docresponsivedevelopmentlocation}{
-	\italic{\bodyresponsivedevelopmentlocation}
-}
-\newcommand{\docresponsivedevelopmentdetails}{
-	\regular{\bodyresponsivedevelopmentdetails}
-}
-
 % Commands to output engineering education content.
 \newcommand{\docengineeringinstitute}{
 	\bold{\bodyengineeringinstitute}
-	\hypericon{https://tec.mx/}{faGlobe}
-	\hypericon{https://certificados.tec.mx/certificate/dd14d13b16e750099a9783188f343e25}{faCheckCircle}
+	\hypericon{https://certificados.tec.mx/certificate/dd14d13b16e750099a9783188f343e25}{faMortarBoard} \hypericon{https://tec.mx/}{faGlobe}
 }
-\newcommand{\docengineeringlanguage}{
-	\colored{\bodyengineeringlanguage}
+\newcommand{\docengineeringposition}{
+	\regular{\bodyengineeringposition}
 }
-\newcommand{\docengineeringdate}{
-	\italic{\bodyengineeringdate}
+\newcommand{\docengineeringtechnology}{
+	\colored{\bodyengineeringtechnology}
+}
+\newcommand{\docengineeringperiod}{
+	\italic{\bodyengineeringperiod}
 }
 \newcommand{\docengineeringlocation}{
 	\italic{\bodyengineeringlocation}
 }
-\newcommand{\docengineeringdetails}{
-	\regular{\bodyengineeringdetails}
-}
 
 
-% Commands to output a professional cloud developer certificate.
-\newcommand{\docprofessionalclouddeveloperissuer}{
-	\boxize{40}{\bold{\bodyprofessionalclouddeveloperissuer}}
+% Commands to output java masterclass activity content.
+\newcommand{\docjavamasterclassorganization}{
+	\boxize{50}{\bold{\bodyjavamasterclassorganization}\hfill\hypericon{https://www.udemy.com/course/java-the-complete-java-developer-course/}{faGlobe}}
 }
-\newcommand{\docprofessionalclouddevelopername}{
-	\hypericon{https://www.credential.net/f05088e4-157e-40be-8d4f-b918be06f6c9}{faExternalLink}
-	\separation{0}
-	\regular{\bodyprofessionalclouddevelopername}
+\newcommand{\docjavamasterclassposition}{
+	\regular{\bodyjavamasterclassposition}
+}
+\newcommand{\docjavamasterclasstechnology}{
+	\colored{\bodyjavamasterclasstechnology}
+}
+\newcommand{\docjavamasterclassperiod}{
+	\italic{\bodyjavamasterclassperiod}
+}
+
+% Commands to output professional cloud developer activity content.
+\newcommand{\docprofessionalclouddeveloperorganization}{
+	\boxize{50}{\bold{\bodyprofessionalclouddeveloperorganization}\hfill\hypericon{https://www.credential.net/f05088e4-157e-40be-8d4f-b918be06f6c9}{faMortarBoard} \hypericon{https://cloud.google.com/learn/certification/cloud-developer}{faGlobe}}
+}
+\newcommand{\docprofessionalclouddeveloperposition}{
+	\regular{\bodyprofessionalclouddeveloperposition}
+}
+\newcommand{\docprofessionalclouddevelopertechnology}{
+	\colored{\bodyprofessionalclouddevelopertechnology}
+}
+\newcommand{\docprofessionalclouddeveloperperiod}{
+	\italic{\bodyprofessionalclouddeveloperperiod}
 }
 \newcommand{\docprofessionalclouddeveloperimage}[1]{
 	\href
-		{https://www.credential.net/f05088e4-157e-40be-8d4f-b918be06f6c9}
-		{\includegraphics[width=#1mm,height=#1mm]{professionalclouddeveloper}}
+	{https://www.credential.net/f05088e4-157e-40be-8d4f-b918be06f6c9}
+	{\includegraphics[width=#1mm,height=#1mm]{professionalclouddeveloper}}
 }
 
-% Commands to output an associate cloud engineer certificate.
-\newcommand{\docassociatecloudengineerissuer}{
-	\boxize{40}{\hidden{\bodyassociatecloudengineerissuer}}
+% Commands to output associate cloud engineer activity content.
+\newcommand{\docassociatecloudengineerorganization}{
+	\boxize{50}{\hidden{\bodyassociatecloudengineerorganization}\hfill\hypericon{https://www.credential.net/59c21655-2c0d-4803-ba06-3bad73fa3b69}{faMortarBoard} \hypericon{https://cloud.google.com/learn/certification/cloud-engineer}{faGlobe}}
 }
-\newcommand{\docassociatecloudengineername}{
-	\hypericon{https://www.credential.net/59c21655-2c0d-4803-ba06-3bad73fa3b69}{faExternalLink}
-	\separation{0}
-	\regular{\bodyassociatecloudengineername}
+\newcommand{\docassociatecloudengineerposition}{
+	\regular{\bodyassociatecloudengineerposition}
+}
+\newcommand{\docassociatecloudengineertechnology}{
+	\colored{\bodyassociatecloudengineertechnology}
+}
+\newcommand{\docassociatecloudengineerperiod}{
+	\italic{\bodyassociatecloudengineerperiod}
 }
 \newcommand{\docassociatecloudengineerimage}[1]{
 	\href
-		{https://www.credential.net/59c21655-2c0d-4803-ba06-3bad73fa3b69}
-		{\includegraphics[width=#1mm,height=#1mm]{associatecloudengineer}}
+	{https://www.credential.net/59c21655-2c0d-4803-ba06-3bad73fa3b69}
+	{\includegraphics[width=#1mm,height=#1mm]{associatecloudengineer}}
 }
 
-% Commands to output a scrum foundation professional certificate.
-\newcommand{\docscrumfoundationprofessionalissuer}{
-	\boxize{40}{\bold{\bodyscrumfoundationprofessionalissuer}}
+% Commands to output responsive web design activity content.
+\newcommand{\docresponsivewebdesignorganization}{
+	\boxize{50}{\bold{\bodyresponsivewebdesignorganization}\hfill\hypericon{https://www.freecodecamp.org/certification/jesugq/responsive-web-design}{faMortarBoard} \hypericon{https://www.freecodecamp.org/learn/2022/responsive-web-design/}{faGlobe}}
 }
-\newcommand{\docscrumfoundationprofessionalname}{
-	\hypericon{https://www.credly.com/badges/769ad27d-6a5c-4c5a-9086-a423050de058/public_url}{faExternalLink}
-	\separation{0}
-	\regular{\bodyscrumfoundationprofessionalname}
+\newcommand{\docresponsivewebdesignposition}{
+	\regular{\bodyresponsivewebdesignposition}
 }
-\newcommand{\docscrumfoundationprofessionalimage}[1]{
-	\href
-		{https://www.credly.com/badges/769ad27d-6a5c-4c5a-9086-a423050de058/public_url}
-		{\includegraphics[width=#1mm,height=#1mm]{scrumfoundationprofessional}}	
+\newcommand{\docresponsivewebdesigntechnology}{
+	\colored{\bodyresponsivewebdesigntechnology}
 }
-
-% Commands to output a responsive web design certificate.
-\newcommand{\docresponsivewebdesignissuer}{
-	\boxize{40}{\bold{\bodyresponsivewebdesignissuer}}
-}
-\newcommand{\docresponsivewebdesignname}{
-	\hypericon{https://www.freecodecamp.org/certification/jesugq/responsive-web-design}{faExternalLink}
-	\separation{0}
-	\regular{\bodyresponsivewebdesignname}
+\newcommand{\docresponsivewebdesignperiod}{
+	\italic{\bodyresponsivewebdesignperiod}
 }
 \newcommand{\docresponsivewebdesignimage}[1]{
 	\href
-		{https://www.freecodecamp.org/certification/jesugq/responsive-web-design}
-		{\includegraphics[width=#1mm,height=#1mm]{responsivewebdesign}}
+	{https://www.freecodecamp.org/certification/jesugq/responsive-web-design}
+	{\includegraphics[width=#1mm,height=#1mm]{responsivewebdesign}}
 }
+
 
 % Command to output an algorithms project.
 \newcommand{\docalgorithmstitle}{
 	\bold{\bodyalgorithmstitle}
 	\hypericon{https://github.com/jesugq/algorithms}{faGithub}
 }
-\newcommand{\docalgorithmslanguage}{
-	\colored{\bodyalgorithmslanguage}
+\newcommand{\docalgorithmstechnology}{
+	\colored{\bodyalgorithmstechnology}
 }
 \newcommand{\docalgorithmsdetails}{
 	\accentize{\bodyalgorithmsdetails}
@@ -402,11 +382,11 @@
 % Command to output a latex resume project.
 \newcommand{\doclatexresumetitle}{
 	\bold{\bodylatexresumetitle}
-	\hypericon{https://github.com/jesugq/resume/blob/master/resume.pdf}{faExternalLink}
+	\hypericon{https://github.com/jesugq/resume/blob/master/resume.pdf}{faGlobe}
 	\hypericon{https://github.com/jesugq/resume}{faGithub}
 }
-\newcommand{\doclatexresumelanguage}{
-	\colored{\bodylatexresumelanguage}
+\newcommand{\doclatexresumetechnology}{
+	\colored{\bodylatexresumetechnology}
 }
 \newcommand{\doclatexresumedetails}{
 	\accentize{\bodylatexresumedetails}
@@ -416,11 +396,11 @@
 % Command to output a google homepage project.
 \newcommand{\docgooglehomepagetitle}{
 	\bold{\bodygooglehomepagetitle}
-	\hypericon{https://jesugq.github.io/google-homepage}{faExternalLink}
+	\hypericon{https://jesugq.github.io/google-homepage}{faGlobe}
 	\hypericon{https://github.com/jesugq/google-homepage}{faGithub}
 }
-\newcommand{\docgooglehomepagelanguage}{
-	\colored{\bodygooglehomepagelanguage}
+\newcommand{\docgooglehomepagetechnology}{
+	\colored{\bodygooglehomepagetechnology}
 }
 \newcommand{\docgooglehomepagedetails}{
 	\accentize{\bodygooglehomepagedetails}
@@ -431,8 +411,8 @@
 	\bold{\bodysudokusolvertitle}
 	\hypericon{https://github.com/jesugq/sudoku/tree/master/sudoku-cli}{faGithub}
 }
-\newcommand{\docsudokusolverlanguage}{
-	\colored{\bodysudokusolverlanguage}
+\newcommand{\docsudokusolvertechnology}{
+	\colored{\bodysudokusolvertechnology}
 }
 \newcommand{\docsudokusolverdetails}{
 	\accentize{\bodysudokusolverdetails}
