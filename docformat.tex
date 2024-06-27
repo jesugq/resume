@@ -184,13 +184,13 @@
 }
 
 % Command to output an education entry.
-\newcommand{\doceducation}[5]{
+\newcommand{\doceducation}[4]{
 	\spacing{1}
 	\separation{-0.825}
 	\parbox[t]{\columnwidth}{
-		#1\hfill#4
+		#1#4\hfill
 		
-		#2#3\hfill#5
+		#2#3\hfill
 	}
 }
 
@@ -287,10 +287,8 @@
 \newcommand{\docengineeringtechnology}{
 	\colored{\bodyengineeringtechnology}
 }
-\newcommand{\docengineeringperiod}{
-	\italic{\bodyengineeringperiod}
-}
 \newcommand{\docengineeringlocation}{
+	\separation{-4}
 	\italic{\bodyengineeringlocation}
 }
 
