@@ -72,7 +72,8 @@
 
 \usepackage[utf8x]{inputenc} % Output international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
-\usepackage[euler]{textgreek}
+\usepackage{textalpha} % Output additional characters
+%\usepackage[euler]{textgreek} % Output additional characters
 
 %\usepackage[default]{raleway}
 %\usepackage[defaultsans]{droidsans}
