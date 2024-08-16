@@ -1,0 +1,441 @@
+%----------------------------------------------------------------------------------------
+%	TEXLIVE HELPERS
+%----------------------------------------------------------------------------------------
+
+% Command to output the preferred accent color.
+\newcommand{\accentcolor}{cadetblue}
+
+% Command to output a non-intended hyperlink in the form of an accent colored font awesome icon.
+\newcommand{\hypericon}[2]{
+	\href{#1}{\textcolor{\accentcolor}{\makebox[2mm]{\csname #2\endcsname}}}
+}
+
+% Command to output a small box containing a font awesome icon.
+\newcommand{\favicon}[1]{
+	\textcolor{\accentcolor}{\makebox(8, 8){\csname#1\endcsname}}
+}
+
+% Command to output non-intented huge bolded content.
+\newcommand{\hugebold}[1]{
+	\hspace{-2.5mm}
+	{\huge\textbf{\textcolor{white}{|}#1}}
+}
+
+% Command to output large accent colored content.
+\newcommand{\largeregular}[1]{
+	{\large\textcolor{\accentcolor}{\textcolor{white}{|}#1}}
+}
+
+% Command to output footnote minted content.
+\newcommand{\footnotemint}[2]{
+	\mintinline[escapeinside=||,fontfamily=helvetica,fontsize=\footnotesize]{#1}{#2}
+}
+
+% Command to output non-indented accent-colored bolded content.
+\newcommand{\coloredbold}[1]{
+	\hspace{-1.75mm}
+	\textcolor{\accentcolor}{\textbf{\textcolor{white}{|}#1}}
+}
+
+% Command to output non-indented accent-colored content.
+\newcommand{\colored}[1]{
+	\hspace{-1.75mm}
+	\textcolor{\accentcolor}{\textcolor{white}{|}#1}
+}
+
+% Command to output non-indented regular content.
+\newcommand{\regular}[1]{
+	\hspace{-1.75mm}
+	\textcolor{white}{|}#1
+}
+
+% Command to output non-indented bolded content.
+\newcommand{\bold}[1]{
+	\hspace{-1.75mm}
+	\textbf{\textcolor{white}{|}#1}
+}
+
+% Command to output non-indented italic content.
+\newcommand{\italic}[1]{
+	\hspace{-1mm}
+	\textit{#1}
+}
+
+% Command to output white-colored content.
+\newcommand{\hidden}[1]{
+	\textcolor{white}{#1}
+}
+
+% Command to output an inserted vertical spacing.
+\newcommand{\spacing}[1]{
+	\vspace{#1mm}
+}
+
+% Command to output an inserted hortizontal separation.
+\newcommand{\separation}[1]{
+	\hspace{#1mm}
+}
+
+% Command to output accent colored lists.
+\newcommand{\accentize}[1]{
+	\vspace{-2mm}
+	\renewcommand*\do[1]{\item ##1}
+	\begin{itemize}[label=\textcolor{\accentcolor}{\textbullet},leftmargin=4mm]
+		\setlength{\parskip}{-0.825mm}
+		#1
+	\end{itemize}
+	\vspace{-2mm}
+}
+
+% Command to output a box of fixed size and indentation.
+\newcommand{\boxize}[2]{
+	\makebox[#1mm][l]{#2}
+}
+
+%----------------------------------------------------------------------------------------
+%	TEXLIVE COMMANDS
+%----------------------------------------------------------------------------------------
+
+% Command to output a centered header with a full name and contact information.
+\newcommand{\docperson}[2]{
+	\parbox[t]{0.90\columnwidth}{#1}
+	%\parbox[t]{0.10\columnwidth}{#2}
+}
+
+% Command to output a large full name and contact information. 
+\newcommand{\doccontact}{
+	\spacing{-6.5}
+	
+	\begin{center}
+	\hugebold{\bodyrealname}
+	\end{center}
+	
+	\spacing{-6.5}
+	
+	\begin{center}
+		\hypericon{https://maps.app.goo.gl/U12Lxq6ALWDSuLdV9}{faMapMarker}\regular{\bodylocation}
+		\hypericon{tel:522222650774}{faPhone}\regular{\bodyworkphone}
+		\hypericon{mailto:jesugq@proton.me}{faEnvelope}\regular{\bodyworkmail}
+		\hypericon{https://www.linkedin.com/in/jesugq}{faLinkedinSquare}\regular{\bodyusername}
+	\end{center}
+	
+	\spacing{-2.5}
+}
+
+% Command to output a vertical row of listing information.
+\newcommand{\doclisting}{
+	\spacing{-6.5}
+	\docshowcase
+		{\docprofessionalclouddeveloperimage{16}}
+		%{\docassociatecloudengineerimage{16}}
+		% {\docscrumfoundationprofessionalimage{16}}
+}
+
+% Command to output a cover letter.
+\newcommand{\docletter}{
+	{\large\bodycoverintroduction}
+	\spacing{8}
+	{\large\accentize{\bodycoverlisting}}
+	\spacing{8}
+	{\large\bodycoverconclusion}
+}
+
+
+% Command to output a full width exhibition of certificates.
+\newcommand{\docexhibition}{
+	\hidden{\hrulefill}
+	\docprofessionalclouddeveloperimage{24}
+	\docassociatecloudengineerimage{24}
+	\docscrumfoundationprofessionalimage{24}
+	\docresponsivewebdesignimage{24}
+	\hidden{\hrulefill}
+}
+
+% Command to output a horizontal line with a title name.
+\newcommand{\docsection}[1]{
+	\spacing{1}
+	\separation{-1.75}
+	\coloredbold{#1}
+	
+	\spacing{-2.5}
+	\colored{\hrulefill}
+	\separation{-3.5}
+	
+	\spacing{1}
+}
+
+% Command to output a horizontally centered block of elements.
+\newcommand{\docshowcase}[1]{
+	\hfill
+	\parbox[t]{16mm}{#1}
+}
+
+% Command to output an experience entry.
+\newcommand{\docexperience}[6]{
+	\spacing{1}
+	\separation{-0.825}
+	\parbox[t]{\columnwidth}{
+		#1\hfill#4
+		
+		#2#3\hfill#5
+		
+		#6
+	}
+}
+
+% Command to output an education entry.
+\newcommand{\doceducation}[4]{
+	\spacing{1}
+	\separation{-0.825}
+	\parbox[t]{\columnwidth}{
+		#1#4\hfill
+		
+		#2#3\hfill
+	}
+}
+
+% Command to output an activity entry.
+\newcommand{\docactivity}[4]{
+	\spacing{1}
+	\parbox[t]{\columnwidth}{
+		#1#2#3\hfill#4\separation{-3}
+	}
+}
+
+% Command to output a certificate entry.
+\newcommand{\doccertificate}[2]{
+	\spacing{1}
+	\parbox[t]{\columnwidth}{
+		#1#2\hfill
+	}
+}
+
+% Command to output a project entry,
+\newcommand{\docproject}[3]{
+	\spacing{1}
+	\separation{-0.825}
+	\parbox[t]{\columnwidth}{
+		#1#2\hfill
+		
+		#3
+	}
+}
+
+% Command to output a row of skills.
+\newcommand{\docskill}[2]{
+	\spacing{1}
+	\parbox[t]{\columnwidth}{
+		#1#2
+	}
+}
+
+%----------------------------------------------------------------------------------------
+%	TEXLIVE STRINGS
+%----------------------------------------------------------------------------------------
+
+% Commands to output citi banamex experience content.
+\newcommand{\doccitibanamexorganization}{
+	\bold{\bodycitibanamexorganization}
+	\hypericon{https://www.banamex.com}{faGlobe}
+}
+\newcommand{\doccitibanamexposition}{
+	\regular{\bodycitibanamexposition}
+}
+\newcommand{\doccitibanamextechnology}{
+	\colored{\bodycitibanamextechnology}
+}
+\newcommand{\doccitibanamexlocation}{
+	\italic{\bodycitibanamexlocation}
+}
+\newcommand{\doccitibanamexperiod}{
+	\italic{\bodycitibanamexperiod}
+}
+\newcommand{\doccitibanamexdetails}{
+	\accentize{\bodycitibanamexdetails}
+}
+
+% Commands to output anzen soluciones experience content.
+\newcommand{\docanzendigitalorganization}{
+	\bold{\bodyanzendigitalorganization}
+	\hypericon{https://mx.linkedin.com/company/anzendigital}{faGlobe}
+}
+\newcommand{\docanzendigitalposition}{
+	\regular{\bodyanzendigitalposition}
+}
+\newcommand{\docanzendigitaltechnology}{
+	\colored{\bodyanzendigitaltechnology}
+}
+\newcommand{\docanzendigitallocation}{
+	\italic{\bodyanzendigitallocation}
+}
+\newcommand{\docanzendigitalperiod}{
+	\italic{\bodyanzendigitalperiod}
+}
+\newcommand{\docanzendigitaldetails}{
+	\accentize{\bodyanzendigitaldetails}
+}
+
+
+% Commands to output engineering education content.
+\newcommand{\docengineeringinstitute}{
+	\bold{\bodyengineeringinstitute}
+	\hypericon{https://certificados.tec.mx/certificate/dd14d13b16e750099a9783188f343e25}{faMortarBoard} \hypericon{https://tec.mx/}{faGlobe}
+}
+\newcommand{\docengineeringposition}{
+	\regular{\bodyengineeringposition}
+}
+\newcommand{\docengineeringtechnology}{
+	\colored{\bodyengineeringtechnology}
+}
+\newcommand{\docengineeringlocation}{
+	\separation{-4}
+	\italic{\bodyengineeringlocation}
+}
+
+
+% Commands to output java masterclass activity content.
+\newcommand{\docjavamasterclassorganization}{
+	\boxize{50}{\bold{\bodyjavamasterclassorganization}\hfill\hypericon{https://www.udemy.com/course/java-the-complete-java-developer-course/}{faGlobe}}
+}
+\newcommand{\docjavamasterclassposition}{
+	\regular{\bodyjavamasterclassposition}
+}
+\newcommand{\docjavamasterclasstechnology}{
+	\colored{\bodyjavamasterclasstechnology}
+}
+\newcommand{\docjavamasterclassperiod}{
+	\italic{\bodyjavamasterclassperiod}
+}
+
+% Commands to output professional cloud developer activity content.
+\newcommand{\docprofessionalclouddeveloperorganization}{
+	\boxize{50}{\bold{\bodyprofessionalclouddeveloperorganization}\hfill\hypericon{https://www.credential.net/f05088e4-157e-40be-8d4f-b918be06f6c9}{faMortarBoard} \hypericon{https://cloud.google.com/learn/certification/cloud-developer}{faGlobe}}
+}
+\newcommand{\docprofessionalclouddeveloperposition}{
+	\regular{\bodyprofessionalclouddeveloperposition}
+}
+\newcommand{\docprofessionalclouddevelopertechnology}{
+	\colored{\bodyprofessionalclouddevelopertechnology}
+}
+\newcommand{\docprofessionalclouddeveloperperiod}{
+	\italic{\bodyprofessionalclouddeveloperperiod}
+}
+\newcommand{\docprofessionalclouddeveloperimage}[1]{
+	\href
+	{https://www.credential.net/f05088e4-157e-40be-8d4f-b918be06f6c9}
+	{\includegraphics[width=#1mm,height=#1mm]{professionalclouddeveloper}}
+}
+
+% Commands to output associate cloud engineer activity content.
+\newcommand{\docassociatecloudengineerorganization}{
+	\boxize{50}{\hidden{\bodyassociatecloudengineerorganization}\hfill\hypericon{https://www.credential.net/59c21655-2c0d-4803-ba06-3bad73fa3b69}{faMortarBoard} \hypericon{https://cloud.google.com/learn/certification/cloud-engineer}{faGlobe}}
+}
+\newcommand{\docassociatecloudengineerposition}{
+	\regular{\bodyassociatecloudengineerposition}
+}
+\newcommand{\docassociatecloudengineertechnology}{
+	\colored{\bodyassociatecloudengineertechnology}
+}
+\newcommand{\docassociatecloudengineerperiod}{
+	\italic{\bodyassociatecloudengineerperiod}
+}
+\newcommand{\docassociatecloudengineerimage}[1]{
+	\href
+	{https://www.credential.net/59c21655-2c0d-4803-ba06-3bad73fa3b69}
+	{\includegraphics[width=#1mm,height=#1mm]{associatecloudengineer}}
+}
+
+% Commands to output responsive web design activity content.
+\newcommand{\docresponsivewebdesignorganization}{
+	\boxize{50}{\bold{\bodyresponsivewebdesignorganization}\hfill\hypericon{https://www.freecodecamp.org/certification/jesugq/responsive-web-design}{faMortarBoard} \hypericon{https://www.freecodecamp.org/learn/2022/responsive-web-design/}{faGlobe}}
+}
+\newcommand{\docresponsivewebdesignposition}{
+	\regular{\bodyresponsivewebdesignposition}
+}
+\newcommand{\docresponsivewebdesigntechnology}{
+	\colored{\bodyresponsivewebdesigntechnology}
+}
+\newcommand{\docresponsivewebdesignperiod}{
+	\italic{\bodyresponsivewebdesignperiod}
+}
+\newcommand{\docresponsivewebdesignimage}[1]{
+	\href
+	{https://www.freecodecamp.org/certification/jesugq/responsive-web-design}
+	{\includegraphics[width=#1mm,height=#1mm]{responsivewebdesign}}
+}
+
+
+% Command to output an algorithms project.
+\newcommand{\docalgorithmstitle}{
+	\bold{\bodyalgorithmstitle}
+	\hypericon{https://github.com/jesugq/algorithms}{faGithub}
+}
+\newcommand{\docalgorithmstechnology}{
+	\colored{\bodyalgorithmstechnology}
+}
+\newcommand{\docalgorithmsdetails}{
+	\accentize{\bodyalgorithmsdetails}
+}
+
+% Command to output a latex resume project.
+\newcommand{\doclatexresumetitle}{
+	\bold{\bodylatexresumetitle}
+	\hypericon{https://github.com/jesugq/resume/blob/master/resume.pdf}{faGlobe}
+	\hypericon{https://github.com/jesugq/resume}{faGithub}
+}
+\newcommand{\doclatexresumetechnology}{
+	\colored{\bodylatexresumetechnology}
+}
+\newcommand{\doclatexresumedetails}{
+	\accentize{\bodylatexresumedetails}
+}
+
+
+% Command to output a google homepage project.
+\newcommand{\docgooglehomepagetitle}{
+	\bold{\bodygooglehomepagetitle}
+	\hypericon{https://jesugq.github.io/google-homepage}{faGlobe}
+	\hypericon{https://github.com/jesugq/google-homepage}{faGithub}
+}
+\newcommand{\docgooglehomepagetechnology}{
+	\colored{\bodygooglehomepagetechnology}
+}
+\newcommand{\docgooglehomepagedetails}{
+	\accentize{\bodygooglehomepagedetails}
+}
+
+% Commands to output a sudoku solver project.
+\newcommand{\docsudokusolvertitle}{
+	\bold{\bodysudokusolvertitle}
+	\hypericon{https://github.com/jesugq/sudoku/tree/master/sudoku-cli}{faGithub}
+}
+\newcommand{\docsudokusolvertechnology}{
+	\colored{\bodysudokusolvertechnology}
+}
+\newcommand{\docsudokusolverdetails}{
+	\accentize{\bodysudokusolverdetails}
+}
+
+% Commands to output development skills content.
+\newcommand{\docdevelopmentcategory}{
+	\boxize{25}{\bold{\bodydevelopmentcategory}}
+}
+\newcommand{\docdevelopmentdetails}{
+	\regular{\bodydevelopmentdetails}
+}
+
+% Command to output discipline skills content.
+\newcommand{\docdisciplinecategory}{
+	\boxize{25}{\bold{\bodydisciplinecategory}}
+}
+\newcommand{\docdisciplinedetails}{
+	\regular{\bodydisciplinedetails}
+}
+
+% Command to output environment skills content.
+\newcommand{\docenvironmentcategory}{
+	\boxize{25}{\bold{\bodyenvironmentcategory}}
+}
+\newcommand{\docenvironmentdetails}{
+	\regular{\bodyenvironmentdetails}
+}
