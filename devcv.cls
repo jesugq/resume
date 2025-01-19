@@ -88,6 +88,7 @@
 
 \usepackage{xcolor}
 
+\definecolor{rice}{RGB}{251,252,248} % Create the commonly used rice text color
 \definecolor{cerulean}{RGB}{4,146,194} % Create the commonly used cerulean text color
 \definecolor{cadetblue}{RGB}{116,114,154} % Create the commonly used cadetblue text color
 

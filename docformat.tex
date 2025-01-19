@@ -63,7 +63,7 @@
 
 % Command to output white-colored content.
 \newcommand{\hidden}[1]{
-	\textcolor{white}{#1}
+	\textcolor{rice}{#1}
 }
 
 % Command to output an inserted vertical spacing.
@@ -162,6 +162,12 @@
 	\separation{-3.5}
 	
 	\spacing{1}
+}
+
+% Command to output resume metadata.
+\newcommand{\docmetadata}[1]{
+	\fontsize{2}{4}\selectfont
+	\hidden{#1}
 }
 
 % Command to output a horizontally centered block of elements.
