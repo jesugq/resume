@@ -63,6 +63,7 @@
 
 % Command to output white-colored content.
 \newcommand{\hidden}[1]{
+	\hspace{0mm}
 	\textcolor{rice}{#1}
 }
 
@@ -164,9 +165,20 @@
 	\spacing{1}
 }
 
+% Command to output a hidden horizontal line with a title name.
+\newcommand{\docmetasection}[1]{
+	\separation{-1.75}
+	\hidden{#1}
+	
+	\spacing{-2.5}
+	\hidden{\hrulefill}
+	\separation{-3.5}
+}
+
 % Command to output resume metadata.
 \newcommand{\docmetadata}[1]{
 	\fontsize{2}{4}\selectfont
+	
 	\hidden{#1}
 }
 
@@ -231,7 +243,7 @@
 \newcommand{\docskill}[2]{
 	\spacing{1}
 	\parbox[t]{\columnwidth}{
-		#1#2
+		#1\separation{-4.75}#2\hfill
 	}
 }
 
