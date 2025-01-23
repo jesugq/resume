@@ -5,6 +5,9 @@
 % Command to output the preferred accent color.
 \newcommand{\accentcolor}{cadetblue}
 
+% Command to output the preferred white color.
+\newcommand{\hiddencolor}{rice}
+
 % Command to output a non-intended hyperlink in the form of an accent colored font awesome icon.
 \newcommand{\hypericon}[2]{
 	\href{#1}{\textcolor{\accentcolor}{\makebox[2mm]{\csname #2\endcsname}}}
@@ -63,8 +66,7 @@
 
 % Command to output white-colored content.
 \newcommand{\hidden}[1]{
-	\hspace{0mm}
-	\textcolor{rice}{#1}
+	\textcolor{\hiddencolor}{#1}
 }
 
 % Command to output an inserted vertical spacing.
@@ -165,21 +167,12 @@
 	\spacing{1}
 }
 
-% Command to output a hidden horizontal line with a title name.
-\newcommand{\docmetasection}[1]{
-	\separation{-1.75}
-	\hidden{#1}
-	
-	\spacing{-2.5}
-	\hidden{\hrulefill}
-	\separation{-3.5}
-}
-
 % Command to output resume metadata.
 \newcommand{\docmetadata}[1]{
-	\fontsize{2}{4}\selectfont
-	
-	\hidden{#1}
+	\fontsize{1mm}{0mm}\selectfont
+	\parbox[t]{\columnwidth}{
+		\hidden{#1}
+	}
 }
 
 % Command to output a horizontally centered block of elements.
@@ -367,7 +360,7 @@
 
 % Commands to output associate cloud engineer activity content.
 \newcommand{\docassociatecloudengineerorganization}{
-	\boxize{50}{\hidden{\bodyassociatecloudengineerorganization}\hfill\hypericon{https://www.credential.net/59c21655-2c0d-4803-ba06-3bad73fa3b69}{faMortarBoard} \hypericon{https://cloud.google.com/learn/certification/cloud-engineer}{faGlobe}}
+	\boxize{50}{\bold{\bodyassociatecloudengineerorganization}\hfill\hypericon{https://www.credential.net/59c21655-2c0d-4803-ba06-3bad73fa3b69}{faMortarBoard} \hypericon{https://cloud.google.com/learn/certification/cloud-engineer}{faGlobe}}
 }
 \newcommand{\docassociatecloudengineerposition}{
 	\regular{\bodyassociatecloudengineerposition}
