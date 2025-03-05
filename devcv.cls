@@ -218,7 +218,7 @@
 	\begin{longtable}[H]{l}
 	}{
 	\end{longtable}
-	\spacing{2}
+	\vspace{2mm}
 }
 
 % Environment to hold three columns of entries
