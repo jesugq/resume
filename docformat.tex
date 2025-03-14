@@ -8,7 +8,7 @@
 
 % Colors
 \newcommand{\accentcolor}{cadetblue}
-\newcommand{\hiddentextcolor}{rice}
+\newcommand{\hiddencolor}{rice}
 
 % Boxes
 \newcommand{\boxize}[2]{
@@ -49,7 +49,7 @@
 	\textit{#1}
 }
 \newcommand{\hiddentext}[1]{
-	\textcolor{\hiddentextcolor}{#1}
+	\textcolor{\hiddencolor}{#1}
 }
 
 % Lists
@@ -83,12 +83,14 @@
 % Sections
 \newcommand{\docsection}[1]{
 	\vspacing{1}
-	\hspacing{-1.75}
+	
+	\hspacing{-2.7}
 	\coloredheading{#1}
 	
 	\vspacing{-2.5}
+	
+	\hspacing{-2.7}
 	\coloredtext{\hrulefill}
-	\hspacing{-3.5}
 	
 	\vspacing{1}
 }
@@ -128,29 +130,17 @@
 
 % Experience
 \newcommand{\docexperience}[8]{
-	\vspacing{1}
-	\hspacing{-0.825}
 	\parbox[t]{\columnwidth}{
-		\boldtext{#1}\hypericon{#2}{#3}\hfill\italictext{#4}
+		\boldtext{#1}\hypericon{#2}{#3}\hfill\boldtext{#4}
 		
-		\regulartext{#5}\coloredtext{#6}\hfill\italictext{#7}
+		\regulartext{#5}\coloredtext{#6}\hfill\regulartext{#7}
 		
 		\accentize{#8}
 	}
 }
 
-% Certificates
-\newcommand{\doccertificates}[8]{
-	\vspacing{1}
-	\parbox[t]{\columnwidth}{
-		\boxize{60}{\boldtext{#1}\hfill\hypericon{#2}{#3}\hypericon{#4}{#5}}\regulartext{#6}\coloredtext{#7}\hfill\italictext{#8}
-	}
-}
-
 % Education
 \newcommand{\doceducation}[7]{
-	\vspacing{1}
-	\hspacing{-0.825}
 	\parbox[t]{\columnwidth}{
 		\boldtext{#1}\hypericon{#2}{#3}\hypericon{#4}{#5}
 		
@@ -158,21 +148,28 @@
 	}
 }
 
-% Projects
-\newcommand{\docprojects}[7]{
-	\vspacing{1}
-	\hspacing{-0.825}
+% Certificates
+\newcommand{\doccertificates}[8]{
+	\hspacing{-2.7}
 	\parbox[t]{\columnwidth}{
-		\boldtext{#1}\hypericon{#2}{#3}\hypericon{#4}{#5}\coloredtext{#6}
-		
-		\accentize{#7}
+		\boxize{60}{\boldtext{#1}\hfill\hypericon{#2}{#3}\hypericon{#4}{#5}}\regulartext{#6}\coloredtext{#7}\hfill\regulartext{#8}\vspacing{1}\hspacing{-3}
 	}
 }
 
 % Skills
 \newcommand{\docskill}[2]{
-	\vspacing{1}
+	\hspacing{-2.7}
 	\parbox[t]{\columnwidth}{
-		\boxize{25}{\boldtext{#1}}\regulartext{#2}
+		\boxize{25}{\boldtext{#1}}\regulartext{#2}\vspacing{1}\hspacing{-3}
+	}
+}
+
+
+% Projects
+\newcommand{\docprojects}[7]{
+	\parbox[t]{\columnwidth}{
+		\boldtext{#1}\hypericon{#2}{#3}\hypericon{#4}{#5}\coloredtext{#6}
+		
+		\accentize{#7}
 	}
 }

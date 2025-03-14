@@ -88,7 +88,7 @@
 
 \usepackage{xcolor}
 
-\definecolor{rice}{RGB}{240,240,240} % Create the commonly used rice text color
+\definecolor{rice}{RGB}{200,200,200} % Create the commonly used rice text color
 \definecolor{cerulean}{RGB}{4,146,194} % Create the commonly used cerulean text color
 \definecolor{cadetblue}{RGB}{116,114,154} % Create the commonly used cadetblue text color
 
@@ -216,9 +216,8 @@
 % Environment to hold a new list of rows
 \newenvironment{entryrow}{
 	\begin{longtable}[H]{l}
-	}{
+}{
 	\end{longtable}
-	\vspace{2mm}
 }
 
 % Environment to hold three columns of entries
