@@ -229,7 +229,7 @@
 
 % Environment to hold a single box of content.
 \newenvironment{entrytext}{
-	\begin{adjustwidth}{1.5cm}{1.5cm}
+	\begin{adjustwidth}{1cm}{1cm}
 }{
 	\end{adjustwidth}
 }
