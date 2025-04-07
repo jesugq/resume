@@ -64,7 +64,7 @@
 }
 
 % Cover
-\newcommand{\docletter}[3]{
+\newcommand{\formatletter}[3]{
 	{\large#1}
 	\vspacing{8}
 	{\large\accentize{#2}}
@@ -73,7 +73,7 @@
 }
 
 % Metadata
-\newcommand{\docmetadata}[1]{
+\newcommand{\formatmetadata}[1]{
 	\fontsize{2mm}{0mm}\selectfont
 	\parbox[t]{\columnwidth}{
 		\hiddentext{#1}
@@ -81,7 +81,7 @@
 }
 
 % Sections
-\newcommand{\docsection}[1]{
+\newcommand{\formatsection}[1]{
 	\vspacing{1}
 	
 	\hspacing{-2.7}
@@ -96,7 +96,7 @@
 }
 
 % Contact
-\newcommand{\docperson}[9]{
+\newcommand{\formatperson}[9]{
 	\parbox[t]{0.90\columnwidth}{
 		\vspacing{-6.5}
 		
@@ -118,18 +118,18 @@
 }
 
 % General
-\newcommand{\doctechnology}[1]{
+\newcommand{\formattechnology}[1]{
 	\coloredtext{#1}
 }
-\newcommand{\docperiod}[1]{
+\newcommand{\formatperiod}[1]{
 	\italictext{#1}
 }
-\newcommand{\docdetails}[1]{
+\newcommand{\formatdetails}[1]{
 	\accentize{#1}
 }
 
 % Experience
-\newcommand{\docexperience}[8]{
+\newcommand{\formatexperience}[8]{
 	\parbox[t]{\columnwidth}{
 		\boldtext{#1}\hypericon{#2}{#3}\hfill\boldtext{#4}
 		
@@ -140,7 +140,7 @@
 }
 
 % Education
-\newcommand{\doceducation}[7]{
+\newcommand{\formateducation}[7]{
 	\parbox[t]{\columnwidth}{
 		\boldtext{#1}\hypericon{#2}{#3}\hypericon{#4}{#5}
 		
@@ -149,7 +149,7 @@
 }
 
 % Certificates
-\newcommand{\doccertificates}[8]{
+\newcommand{\formatcertificates}[8]{
 	\hspacing{-2.7}
 	\parbox[t]{\columnwidth}{
 		\boxize{60}{\boldtext{#1}\hfill\hypericon{#2}{#3}\hypericon{#4}{#5}}\regulartext{#6}\coloredtext{#7}\hfill\regulartext{#8}\vspacing{1}\hspacing{-3}
@@ -157,7 +157,7 @@
 }
 
 % Skills
-\newcommand{\docskill}[2]{
+\newcommand{\formatskill}[2]{
 	\hspacing{-2.7}
 	\parbox[t]{\columnwidth}{
 		\boxize{25}{\boldtext{#1}}\regulartext{#2}\vspacing{1}\hspacing{-3}
@@ -166,7 +166,7 @@
 
 
 % Projects
-\newcommand{\docprojects}[7]{
+\newcommand{\formatprojects}[7]{
 	\parbox[t]{\columnwidth}{
 		\boldtext{#1}\hypericon{#2}{#3}\hypericon{#4}{#5}\coloredtext{#6}
 		
@@ -176,7 +176,7 @@
 
 % Cover
 % Command to output a cover letter.
-\newcommand{\doccover}[4]{
+\newcommand{\formatcover}[4]{
 	\fontsize{16pt}{24pt}\selectfont
 	
 	\vspacing{12}
