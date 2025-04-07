@@ -140,11 +140,13 @@
 }
 
 % Education
-\newcommand{\formateducation}[7]{
+\newcommand{\formateducation}[8]{
 	\parbox[t]{\columnwidth}{
 		\boldtext{#1}\hypericon{#2}{#3}\hypericon{#4}{#5}
 		
 		\regulartext{#6}\coloredtext{#7}
+		
+		\accentize{#8}
 	}
 }
 
