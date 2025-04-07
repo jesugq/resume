@@ -1,0 +1,193 @@
+% Whitespace
+\newcommand{\vspacing}[1]{
+	\vspace{#1mm}
+}
+\newcommand{\hspacing}[1]{
+	\hspace{#1mm}
+}
+
+% Colors
+\newcommand{\accentcolor}{cadetblue}
+\newcommand{\hiddencolor}{rice}
+
+% Boxes
+\newcommand{\boxize}[2]{
+	\makebox[#1mm][l]{#2}
+}
+
+% Icons
+\newcommand{\hypericon}[2]{
+	\href{#1}{\textcolor{\accentcolor}{\makebox[2mm]{\csname #2\endcsname}}}
+}
+\newcommand{\favicon}[1]{
+	\textcolor{\accentcolor}{\makebox(8, 8){\csname#1\endcsname}}
+}
+
+% Formatting
+\newcommand{\boldheading}[1]{
+	\hspace{-2.5mm}
+	{\huge\textbf{\textcolor{white}{|}#1}}
+}
+\newcommand{\coloredheading}[1]{
+	\hspace{-1.75mm}
+	\textcolor{\accentcolor}{\textbf{\textcolor{white}{|}#1}}
+}
+\newcommand{\boldtext}[1]{
+	\hspace{-1.75mm}
+	\textbf{\textcolor{white}{|}#1}
+}
+\newcommand{\coloredtext}[1]{
+	\hspace{-1.75mm}
+	\textcolor{\accentcolor}{\textcolor{white}{|}#1}
+}
+\newcommand{\regulartext}[1]{
+	\hspace{-1.75mm}
+	\textcolor{white}{|}#1
+}
+\newcommand{\italictext}[1]{
+	\hspace{-1mm}
+	\textit{#1}
+}
+\newcommand{\hiddentext}[1]{
+	\textcolor{\hiddencolor}{#1}
+}
+
+% Lists
+\newcommand{\accentize}[1]{
+	\vspace{-2mm}
+	\renewcommand*\do[1]{\item ##1}
+	\begin{itemize}[label=\textcolor{\accentcolor}{\textbullet},leftmargin=4mm]
+		\setlength{\parskip}{-0.825mm}
+		#1
+	\end{itemize}
+	\vspace{-2mm}
+}
+
+% Cover
+\newcommand{\docletter}[3]{
+	{\large#1}
+	\vspacing{8}
+	{\large\accentize{#2}}
+	\vspacing{8}
+	{\large#3}
+}
+
+% Metadata
+\newcommand{\docmetadata}[1]{
+	\fontsize{2mm}{0mm}\selectfont
+	\parbox[t]{\columnwidth}{
+		\hiddentext{#1}
+	}
+}
+
+% Sections
+\newcommand{\docsection}[1]{
+	\vspacing{1}
+	
+	\hspacing{-2.7}
+	\coloredheading{#1}
+	
+	\vspacing{-2.5}
+	
+	\hspacing{-2.7}
+	\coloredtext{\hrulefill}
+	
+	\vspacing{1}
+}
+
+% Contact
+\newcommand{\docperson}[9]{
+	\parbox[t]{0.90\columnwidth}{
+		\vspacing{-6.5}
+		
+		\begin{center}
+			\boldheading{#1}
+		\end{center}
+		
+		\vspacing{-6.5}
+		
+		\begin{center}
+			\hypericon{#2}{faMapMarker}\regulartext{#3}
+			\hypericon{#4}{faPhone}\regulartext{#5}
+			\hypericon{#6}{faEnvelope}\regulartext{#7}
+			\hypericon{#8}{faLinkedinSquare}\regulartext{#9}
+		\end{center}
+		
+		\vspacing{-2.5}
+	}
+}
+
+% General
+\newcommand{\doctechnology}[1]{
+	\coloredtext{#1}
+}
+\newcommand{\docperiod}[1]{
+	\italictext{#1}
+}
+\newcommand{\docdetails}[1]{
+	\accentize{#1}
+}
+
+% Experience
+\newcommand{\docexperience}[8]{
+	\parbox[t]{\columnwidth}{
+		\boldtext{#1}\hypericon{#2}{#3}\hfill\boldtext{#4}
+		
+		\regulartext{#5}\coloredtext{#6}\hfill\regulartext{#7}
+		
+		\accentize{#8}
+	}
+}
+
+% Education
+\newcommand{\doceducation}[7]{
+	\parbox[t]{\columnwidth}{
+		\boldtext{#1}\hypericon{#2}{#3}\hypericon{#4}{#5}
+		
+		\regulartext{#6}\coloredtext{#7}
+	}
+}
+
+% Certificates
+\newcommand{\doccertificates}[8]{
+	\hspacing{-2.7}
+	\parbox[t]{\columnwidth}{
+		\boxize{60}{\boldtext{#1}\hfill\hypericon{#2}{#3}\hypericon{#4}{#5}}\regulartext{#6}\coloredtext{#7}\hfill\regulartext{#8}\vspacing{1}\hspacing{-3}
+	}
+}
+
+% Skills
+\newcommand{\docskill}[2]{
+	\hspacing{-2.7}
+	\parbox[t]{\columnwidth}{
+		\boxize{25}{\boldtext{#1}}\regulartext{#2}\vspacing{1}\hspacing{-3}
+	}
+}
+
+
+% Projects
+\newcommand{\docprojects}[7]{
+	\parbox[t]{\columnwidth}{
+		\boldtext{#1}\hypericon{#2}{#3}\hypericon{#4}{#5}\coloredtext{#6}
+		
+		\accentize{#7}
+	}
+}
+
+% Cover
+% Command to output a cover letter.
+\newcommand{\doccover}[4]{
+	\fontsize{16pt}{24pt}\selectfont
+	
+	\vspacing{12}
+	#1
+	
+	\vspacing{12}
+	#2
+	
+	\vspacing{12}
+	#3
+	
+	\vspacing{12}
+	#4
+}
