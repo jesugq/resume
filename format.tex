@@ -152,9 +152,12 @@
 
 % Certificates
 \newcommand{\formatcertificates}[8]{
-	\hspacing{-2.7}
 	\parbox[t]{\columnwidth}{
-		\boxize{60}{\boldtext{#1}\hfill\hypericon{#2}{#3}\hypericon{#4}{#5}}\regulartext{#6}\coloredtext{#7}\hfill\regulartext{#8}\vspacing{1}\hspacing{-3}
+		\boldtext{#1}\hypericon{#2}{#3}\hypericon{#4}{#5}
+		
+		\regulartext{#6}\coloredtext{#7}
+		
+		\accentize{#8}
 	}
 }
 
