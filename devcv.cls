@@ -94,7 +94,7 @@
 
 \definecolor{cerulean}{RGB}{4,146,194} % Create the commonly used cerulean text color
 \definecolor{cadetblue}{RGB}{116,114,154} % Create the commonly used cadetblue text color
-\definecolor{rice}{RGB}{200,200,200} % Create the commonly used rice text color
+\definecolor{graylean}{RGB}{100,100,100} % Create the commonly used rice text color
 
 \usepackage{minted} % Provides inline code functionality
 
